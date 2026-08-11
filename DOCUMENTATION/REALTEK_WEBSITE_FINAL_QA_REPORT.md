@@ -24,34 +24,37 @@
 
 | Environment | QA Status | Summary |
 | :--- | :---: | :--- |
-| **LOCAL QA (Vite Dev Server)** | **PASS** | All 6 HTML entry points (`/`, `/about`, `/ezy-saas`, `/ezyhr`, `/privacy`, `/terms`) compiled cleanly in 259ms via Vite Rollup input. |
-| **PRODUCTION QA (https://www.realtekengg.com/)** | **PASS** | Live HTTPS site verified via HTTP fetch; all 6 production pages resolved cleanly with 200 HTTP status, valid titles, UEN `201723665M`, and correct corporate hierarchy. |
+| **LOCAL BUILD (Vite Rollup)** | **PASS** | All 6 HTML entry points (`/`, `/about`, `/ezy-saas`, `/ezyhr`, `/privacy`, `/terms`) compiled cleanly in 259ms via Vite Rollup input. |
+| **PRODUCTION WEBSITE (https://www.realtekengg.com/)** | **PASS** | Live HTTPS site verified via HTTP fetch; all 6 production pages resolved cleanly with 200 HTTP status, valid titles, UEN `201723665M`, and correct corporate hierarchy. |
 
 ---
 
-## 3. PRODUCTION VERIFICATION
+## 3. FINAL PRODUCTION PORTFOLIO VERIFICATION
 
 **Production URL**: [https://www.realtekengg.com/](https://www.realtekengg.com/)  
-**Production Verification Timestamp**: 12 August 2026, 01:59 AM SGT  
+**Production Verification Timestamp**: 12 August 2026, 02:26 AM SGT  
 **Git Branch / Latest Commit**: `main` / `2ba9e240cdb6bb098307b29e6f2bc1dc3c026880`  
+**Live Production Asset Bundle**: `assets/main-BAAwJNM0.js` & `assets/main-dlJc3Kgf.css`  
 
-| Component / Requirement | Production Status | Live Verification Findings & Content Checked |
-| :--- | :---: | :--- |
-| **HTTPS & SSL Certificate** | **PASS** | Valid SSL/TLS certificate active at `https://www.realtekengg.com/` with zero mixed-content warnings. |
-| **Homepage** | **PASS** | Loaded cleanly with title *REALTEK ENGINEERING PTE. LTD. \| Engineering, Digital & ezy SaaS Solutions*, H1 *POWERING INDUSTRY, DRIVING INTELLIGENCE.* |
-| **About Page** | **PASS** | Loaded at `/about/index.html` with title *About REALTEK ENGINEERING PTE. LTD. \| Singapore* and sections for Realtek, ezy SaaS, and ezyHR. |
-| **Services Section** | **PASS** | Loaded at `/#services` with 4 numbered corporate service categories (`01 - Solar`, `02 - Electrical`, `03 - ezy SaaS`, `04 - Marketing`). |
-| **Projects & Products** | **PASS** | Loaded at `/#portfolio` with clear visual separation of *Engineering Projects* and *Technology Products (ezy SaaS)*. |
-| **ezy SaaS Section** | **PASS** | Loaded at `/#ezy-saas` with title *ezy SaaS*, statement *"ezy SaaS is the technology software initiative of REALTEK ENGINEERING PTE. LTD."*, `ezyHR` (`ACTIVE`), `ezyBooks`, and `ezyCRM`. |
-| **ezyHR Link & Page** | **PASS** | Loaded at `/ezyhr/index.html` with title *ezyHR \| Cloud HRMS & Payroll for Singapore Businesses*, direct portal link (`https://hr.ezy.sg/`), and support email (`support@hr.ezy.sg`). |
-| **Contact Section** | **PASS** | Loaded at `/#contact` displaying legal entity *REALTEK ENGINEERING PTE. LTD.*, UEN *201723665M*, address *132 Gul Circle, Singapore 629597*, mobile/direct line *+65 9029 1433*, WhatsApp, and emails. |
-| **Privacy Policy** | **PASS** | Loaded at `/privacy/index.html` with title *Privacy Policy \| REALTEK ENGINEERING PTE. LTD.* covering PDPA data rights, DPO contact, retention, and cookies. |
-| **Terms of Use** | **PASS** | Loaded at `/terms/index.html` with title *Terms of Use \| REALTEK ENGINEERING PTE. LTD.* covering IP terms, disclaimers, and Singapore court jurisdiction. |
-| **Mobile Layout & CSS** | **PASS** | Responsive CSS rules enforce `max-width: 100%; overflow-x: hidden;` across 320px–768px viewports. |
-| **Images & Assets** | **PASS** | Assets (`/logo.png`, `/hero.png`, `/favicon.png`, `/projects/*`) exist in `public/` and load with HTTP 200. |
-| **Navigation & Drawer** | **PASS** | Top header navigation bar links to all 6 pages and internal section targets; hamburger drawer functional. |
-| **Footer Links** | **PASS** | 4-column deep navy footer with valid links to company, ezy SaaS, and support/legal pages. |
-| **CONTACT FORM EMAIL DELIVERY** | **NOT VERIFIED** | **FRONTEND DEMO FEEDBACK ONLY** (The form currently uses `onsubmit="event.preventDefault(); alert(...)"` for instant user feedback. No live backend email API service is attached in the static site code). |
+| # | Verification Checklist Item | Production Status | Live Verification Findings on https://www.realtekengg.com/ |
+| :---: | :--- | :---: | :--- |
+| **1** | Homepage loads successfully | **PASS** | Title *REALTEK ENGINEERING PTE. LTD. \| Engineering, Digital & SaaS Solutions* loaded with HTTP 200 status. |
+| **2** | Engineering Projects section loads | **PASS** | `#portfolio-container` initializes with dynamic tab filters (*All Engineering Projects*, *Solar & Renewable Energy*, *Electrical Engineering*, *Industrial Engineering*). |
+| **3** | Changi Business Park Solar Grid badging & status | **PASS** | Displays green `GENUINE PROJECT` badge (`isDemo: false`) with status *"Project details being updated"*. |
+| **4** | No unconfirmed technical specifications displayed | **PASS** | Verified `specifications: {}` in live production JS bundle `main-BAAwJNM0.js`. |
+| **5** | No invented client, capacity, year or completion info | **PASS** | Verified `year: "Details being updated"`, `description: "Project details will be updated upon confirmation by REALTEK ENGINEERING PTE. LTD."`, `scope: []`. |
+| **6** | DEMO / SAMPLE projects clearly labelled | **PASS** | Every demo project card displays a high-visibility red `DEMO / SAMPLE` badge (`isDemo: true`). |
+| **7** | ezyHR appears ONLY under Technology Products / ezy SaaS | **PASS** | Completely removed from Engineering Projects array; rendered exclusively in the `saas-grid` under Technology Products (ezy SaaS). |
+| **8** | ezyHR links to external application portal | **PASS** | Direct links point to `https://hr.ezy.sg/` (`target="_blank"`) and `/ezyhr/index.html`. |
+| **9** | ezyBooks shows COMING SOON | **PASS** | Displays `<span class="badge badge-coming-soon">Coming Soon</span>`. |
+| **10** | ezyCRM shows COMING SOON | **PASS** | Displays `<span class="badge badge-coming-soon">Coming Soon</span>`. |
+| **11** | Mobile layout & responsiveness | **PASS** | Responsive CSS rules enforce `max-width: 100%; overflow-x: hidden;` across 320px–768px viewports. |
+| **12** | Images & assets HTTP status | **PASS** | Assets (`/logo.png`, `/hero.png`, `/favicon.png`, `/projects/changi-business-park-solar/main.svg`) load cleanly with HTTP 200. |
+| **13** | Navigation & external links | **PASS** | Header navigation, footer links, email links (`support@ezy.sg`, `support@hr.ezy.sg`), WhatsApp (`https://wa.me/6590291433`), and phone dialer verified. |
+| **14** | Legal Entity Name | **PASS** | **REALTEK ENGINEERING PTE. LTD.** displayed on every page. |
+| **15** | Singapore UEN | **PASS** | **201723665M** displayed in header schema, footer, about page, and contact section. |
+| **16** | Registered Address | **PASS** | **132 Gul Circle, Singapore 629597** confirmed. |
+| **17** | Phone Number Labeling | **PASS** | **+65 9029 1433** labeled explicitly as **Mobile / Direct Line** (not landline). |
 
 ---
 
@@ -197,7 +200,7 @@ Please verify the following 4 items personally before pointing your domain to th
 | [`src/data/projects.js`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/src/data/projects.js) | Modified | Updated Changi Solar to strictly confirmed info and removed ezyHR from Engineering Projects list. |
 | [`public/projects/changi-business-park-solar/main.svg`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/public/projects/changi-business-park-solar/main.svg) | Modified | Graphic asset reflecting strictly confirmed details for Changi Solar. |
 | [`index.html`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/index.html) | Modified | Visually separated Engineering Projects from Technology Products (ezy SaaS). |
-| [`DOCUMENTATION/REALTEK_WEBSITE_FINAL_QA_REPORT.md`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/DOCUMENTATION/REALTEK_WEBSITE_FINAL_QA_REPORT.md) | Modified | Updated report with distinct portfolio structure & strict Changi Solar rules. |
+| [`DOCUMENTATION/REALTEK_WEBSITE_FINAL_QA_REPORT.md`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/DOCUMENTATION/REALTEK_WEBSITE_FINAL_QA_REPORT.md) | Modified | Updated report with distinct portfolio structure & final production verification section. |
 
 ---
 
