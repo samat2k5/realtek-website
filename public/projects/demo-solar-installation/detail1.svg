@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#0B1F33"/>
+  <text x="400" y="230" font-family="sans-serif" font-size="24" font-weight="bold" fill="#E67E22" text-anchor="middle">DEMO PHOTO GALLERY — SOLAR LAYOUT</text>
+  <text x="400" y="280" font-family="sans-serif" font-size="16" fill="#A0AEC0" text-anchor="middle">Sample placeholder layout for testing portfolio modal</text>
+</svg>

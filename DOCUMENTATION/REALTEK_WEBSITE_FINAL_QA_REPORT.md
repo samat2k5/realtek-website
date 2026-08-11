@@ -24,7 +24,7 @@
 
 | Environment | QA Status | Summary |
 | :--- | :---: | :--- |
-| **LOCAL QA (Vite Dev Server)** | **PASS** | All 6 HTML entry points (`/`, `/about`, `/ezy-saas`, `/ezyhr`, `/privacy`, `/terms`) compiled cleanly in 161ms via Vite Rollup input. |
+| **LOCAL QA (Vite Dev Server)** | **PASS** | All 6 HTML entry points (`/`, `/about`, `/ezy-saas`, `/ezyhr`, `/privacy`, `/terms`) compiled cleanly in 259ms via Vite Rollup input. |
 | **PRODUCTION QA (https://www.realtekengg.com/)** | **PASS** | Live HTTPS site verified via HTTP fetch; all 6 production pages resolved cleanly with 200 HTTP status, valid titles, UEN `201723665M`, and correct corporate hierarchy. |
 
 ---
@@ -41,63 +41,74 @@
 | **Homepage** | **PASS** | Loaded cleanly with title *REALTEK ENGINEERING PTE. LTD. \| Engineering, Digital & ezy SaaS Solutions*, H1 *POWERING INDUSTRY, DRIVING INTELLIGENCE.* |
 | **About Page** | **PASS** | Loaded at `/about/index.html` with title *About REALTEK ENGINEERING PTE. LTD. \| Singapore* and sections for Realtek, ezy SaaS, and ezyHR. |
 | **Services Section** | **PASS** | Loaded at `/#services` with 4 numbered corporate service categories (`01 - Solar`, `02 - Electrical`, `03 - ezy SaaS`, `04 - Marketing`). |
-| **Projects & Products** | **PASS** | Loaded at `/#portfolio` with clear separation of *Engineering Projects* and *Technology Products* (`ezyHR`). |
+| **Projects & Products** | **PASS** | Loaded at `/#portfolio` with clear visual separation of *Engineering Projects* and *Technology Products (ezy SaaS)*. |
 | **ezy SaaS Section** | **PASS** | Loaded at `/#ezy-saas` with title *ezy SaaS*, statement *"ezy SaaS is the technology software initiative of REALTEK ENGINEERING PTE. LTD."*, `ezyHR` (`ACTIVE`), `ezyBooks`, and `ezyCRM`. |
 | **ezyHR Link & Page** | **PASS** | Loaded at `/ezyhr/index.html` with title *ezyHR \| Cloud HRMS & Payroll for Singapore Businesses*, direct portal link (`https://hr.ezy.sg/`), and support email (`support@hr.ezy.sg`). |
-| **Contact Section** | **PASS** | Loaded at `/#contact` displaying legal entity *REALTEK ENGINEERING PTE. LTD.*, UEN *201723665M*, address *132 Gul Circle, Singapore 629597*, phone *+65 9029 1433*, WhatsApp, and emails. |
+| **Contact Section** | **PASS** | Loaded at `/#contact` displaying legal entity *REALTEK ENGINEERING PTE. LTD.*, UEN *201723665M*, address *132 Gul Circle, Singapore 629597*, mobile/direct line *+65 9029 1433*, WhatsApp, and emails. |
 | **Privacy Policy** | **PASS** | Loaded at `/privacy/index.html` with title *Privacy Policy \| REALTEK ENGINEERING PTE. LTD.* covering PDPA data rights, DPO contact, retention, and cookies. |
 | **Terms of Use** | **PASS** | Loaded at `/terms/index.html` with title *Terms of Use \| REALTEK ENGINEERING PTE. LTD.* covering IP terms, disclaimers, and Singapore court jurisdiction. |
 | **Mobile Layout & CSS** | **PASS** | Responsive CSS rules enforce `max-width: 100%; overflow-x: hidden;` across 320px–768px viewports. |
-| **Images & Assets** | **PASS** | Assets (`/logo.png`, `/hero.png`, `/favicon.png`) exist in `public/` and load with HTTP 200. |
+| **Images & Assets** | **PASS** | Assets (`/logo.png`, `/hero.png`, `/favicon.png`, `/projects/*`) exist in `public/` and load with HTTP 200. |
 | **Navigation & Drawer** | **PASS** | Top header navigation bar links to all 6 pages and internal section targets; hamburger drawer functional. |
 | **Footer Links** | **PASS** | 4-column deep navy footer with valid links to company, ezy SaaS, and support/legal pages. |
 | **CONTACT FORM EMAIL DELIVERY** | **NOT VERIFIED** | **FRONTEND DEMO FEEDBACK ONLY** (The form currently uses `onsubmit="event.preventDefault(); alert(...)"` for instant user feedback. No live backend email API service is attached in the static site code). |
 
 ---
 
-## 4. CONTACT FORM EMAIL DELIVERY DETAILED ANALYSIS
+## 4. PROJECT PORTFOLIO DESIGN & DATA ARCHITECTURE
 
-* **Current Implementation**: The "Request a Quote" form on `index.html` includes frontend HTML5 validation (`required` fields for name, email, service) and triggers browser alert confirmation feedback.
-* **Email Delivery Status**: **NOT VERIFIED (FRONTEND DEMO FEEDBACK ONLY)**.
-* **Backend Connection**: The corporate website is currently a high-performance static Vite website (`HTML/CSS/JS`). It does not contain an inline backend mail server API key (e.g. Resend, SendGrid, Mailgun, or Nodemailer) to prevent exposing private API keys or database secrets in client-side JavaScript.
-* **Recommendation**: If automated email routing to `admin@realtekengg.com` is desired, attach a serverless cloud function (e.g. Cloudflare Worker or Vercel API function) using environment secrets.
+### 1. Distinct Portfolio Structure (Engineering Projects vs Technology Products)
+The website clearly separates corporate output into two distinct categories:
+1. **Engineering Projects**:
+   - `Changi Business Park Solar Grid` (Confirmed genuine project)
+   - Layout testing DEMO projects (`demo-solar-installation`, `demo-electrical-works`, `demo-commercial-solar`, `demo-industrial-panel`)
+2. **Technology Products (ezy SaaS)**:
+   - `ezyHR` (Active cloud HRMS & payroll software product linking to `/ezyhr/index.html` and `https://hr.ezy.sg/`)
+   - `ezyBooks` (Coming Soon accounting software)
+   - `ezyCRM` (Coming Soon customer management software)
+
+### 2. Confirmed Genuine Project (Changi Business Park Solar Grid)
+To ensure strict accuracy and avoid unconfirmed claims, `changi-business-park-solar` in [`src/data/projects.js`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/src/data/projects.js) contains **ONLY** confirmed information:
+```javascript
+{
+    id: 'changi-business-park-solar',
+    title: 'Changi Business Park Solar Grid',
+    category: 'solar',
+    categoryLabel: 'Solar & Renewable Energy',
+    location: 'Changi Business Park, Singapore',
+    year: 'Details being updated',
+    status: 'Project details being updated',
+    description: 'Project details will be updated upon confirmation by REALTEK ENGINEERING PTE. LTD.',
+    scope: [],
+    specifications: {},
+    highlights: [],
+    images: [ '/projects/changi-business-park-solar/main.svg' ],
+    featured: true,
+    isDemo: false
+}
+```
+* **Badge**: Displays green `GENUINE PROJECT` badge.
+* **No Unconfirmed Claims**: Zero invented capacity, rooftop structural array details, electrical grid claims, contract values, client names, or completion dates.
+
+### 3. Production Safety Controls & Demo Projects
+- **Production Safety Banner**: Displayed at top of `#portfolio`:  
+  *`"⚠️ PORTFOLIO CONTENT UNDER DEVELOPMENT — Project details and photographs will be updated as confirmed data is supplied."`*
+- **Demo Badging**: Every temporary project card displays a bright red `DEMO / SAMPLE` badge.
+- **Modal Demo Alert**: Opening a demo project modal shows:  
+  *`"⚠️ DEMO / SAMPLE PROJECT: This layout is provided for visualization. Real project specifications will be updated upon client authorization."`*
 
 ---
 
 ## 5. WHAT WE CHANGED (EXPLAINED IN SIMPLE ENGLISH)
 
-1. **Made the Company Relationship 100% Clear**:
-   - The website clearly explains that **REALTEK ENGINEERING PTE. LTD.** is the main Singapore company that owns and operates the **ezy SaaS** technology initiative and the **ezyHR** software product.
-   - We removed any ambiguous wording that made ezy SaaS look like a separate legal entity.
+1. **Made Corporate & Product Relationship 100% Clear**:
+   - Explicitly presented **REALTEK ENGINEERING PTE. LTD.** as the parent Singapore legal entity, **ezy SaaS** as its technology software initiative, and **ezyHR** as its active cloud HRMS & payroll product.
 
-2. **Upgraded the Website Visual Theme**:
-   - Redesigned the entire website into a clean, modern Singapore corporate engineering aesthetic using deep navy blue (`#0B1F33`), secondary navy (`#16324F`), light blue-grey section fills (`#EEF2F5`), and crisp white surface cards (`#FFFFFF`).
-   - Removed generic AI-generated elements like emoji icons (`☀️`, `⚡`, `💻`), neon cyan glow overlays, floating shapes, and oversized SaaS template buttons.
-   - Replaced emojis with clean, professional SVG outline icons.
+2. **Upgraded Website Visual Theme**:
+   - Clean, conservative Singapore corporate engineering aesthetic using deep navy blue (`#0B1F33`), secondary navy (`#16324F`), light blue-grey section fills (`#EEF2F5`), and crisp white surface cards (`#FFFFFF`).
 
-3. **Refined the Homepage Banner (Hero Section)**:
-   - Added a full-width industrial engineering background banner (`/hero.png`) with a rich dark navy gradient overlay.
-   - Set the headline to: **POWERING INDUSTRY, DRIVING INTELLIGENCE.**
-   - Added two clear call-to-action buttons: **Explore Services** (scrolls to services) and **Explore ezy SaaS** (opens ezy SaaS section).
-
-4. **Structured the Core Capabilities (Services)**:
-   - Organized company capabilities into 4 numbered engineering categories:
-     * `01 — Solar & Sustainability`
-     * `02 — Electrical & Instrumentation`
-     * `03 — ezy SaaS & Digital Solutions`
-     * `04 — Digital Marketing`
-
-5. **Created Dedicated Pages for Technology & Legal**:
-   - **About Page ([/about/index.html](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/about/index.html))**: Explains "Who is Realtek?", "What is ezy SaaS?", and "What is ezyHR?" with legal UEN `201723665M` details.
-   - **ezy SaaS Overview ([/ezy-saas/index.html](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/ezy-saas/index.html))**: Showcases `ezyHR` (Live), `ezyBooks` (Coming Soon), and `ezyCRM` (Coming Soon).
-   - **ezyHR Product Page ([/ezyhr/index.html](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/ezyhr/index.html))**: Dedicated product landing page linking directly to the portal (`https://hr.ezy.sg/`) and support email (`support@hr.ezy.sg`).
-   - **Privacy Policy ([/privacy/index.html](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/privacy/index.html))** & **Terms of Use ([/terms/index.html](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/terms/index.html))**: Comprehensive legal terms compliant with the Singapore Personal Data Protection Act (PDPA).
-
-6. **Added an Interactive Request a Quote Form**:
-   - Added a functional "Request a Quote" card inside the Contact section with name, email, service selection dropdown, message area, and a prominent `Get Quote` navbar button.
-
-7. **Cleaned Up Compliance Claims**:
-   - Removed unverified regulatory phrasing like "IRAS Certified" or "IRAS Approved". Used accurate, conservative phrasing: *"Cloud-based HRMS and payroll platform designed for Singapore businesses, with features to support local payroll and HR administration requirements."*
+3. **Separated Engineering Projects from Technology Products**:
+   - Built an Engineering Projects portfolio with category filter tabs and expandable project detail modals while keeping `ezyHR` showcased in a dedicated Technology Products block linking directly to the product landing page (`/ezyhr/index.html`) and live application portal (`https://hr.ezy.sg/`).
 
 ---
 
@@ -121,9 +132,14 @@
 |  [ezyHR (Active)]   [ezyBooks (Coming Soon)]   [ezyCRM (Coming Soon)] |  <- ezy SaaS Grid
 +-----------------------------------------------------------------------+
 |  SELECTED PROJECTS & PRODUCTS                                         |
-|  - Engineering Projects: Changi Business Park Solar Grid              |  <- Portfolio
-|  - Technology Products: ezyHR — Cloud HRMS & Payroll                  |
-+-----------------------------------------------------------------------+
+|  1. ENGINEERING PROJECTS                                              |
+|     [Development Banner: PORTFOLIO CONTENT UNDER DEVELOPMENT]         |
+|     [Filter Tabs: All | Solar | Electrical | Industrial]              |  <- Dynamic Portfolio
+|     [Changi Solar (Genuine - Details Updating)] [DEMO Projects...]   |     Grid & Modals
+|                                                                       |
+|  2. TECHNOLOGY PRODUCTS (ezy SaaS)                                    |
+|     [ezyHR (Active)]   [ezyBooks (Coming Soon)]   [ezyCRM]            |  <- Distinct Technology
++-----------------------------------------------------------------------+     Products Block
 |  CONTACT & INQUIRIES | Let's Build Something Together                 |
 |  Address: 132 Gul Circle | UEN: 201723665M | [Request a Quote Form]  |  <- Contact & Quote
 +-----------------------------------------------------------------------+
@@ -131,14 +147,6 @@
 |  Company | ezy SaaS | Support & Legal | © 2026 All Rights Reserved     |     Footer
 +-----------------------------------------------------------------------+
 ```
-
-### Key Page File Links:
-* **Homepage**: [index.html](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/index.html)
-* **About Page**: [about/index.html](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/about/index.html)
-* **ezy SaaS Page**: [ezy-saas/index.html](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/ezy-saas/index.html)
-* **ezyHR Page**: [ezyhr/index.html](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/ezyhr/index.html)
-* **Privacy Policy**: [privacy/index.html](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/privacy/index.html)
-* **Terms of Use**: [terms/index.html](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/terms/index.html)
 
 ---
 
@@ -150,6 +158,7 @@ The website explicitly and consistently identifies the following corporate relat
    * Legal Name: **REALTEK ENGINEERING PTE. LTD.**
    * Singapore UEN: **201723665M**
    * Registered Address: **132 Gul Circle, Singapore 629597**
+   * Mobile / Direct Line: **+65 9029 1433** *(Labeled as Mobile / Direct Line, not landline)*
 
 2. **Technology Division Ownership Statement**:
    * *"ezy SaaS is the technology software initiative of REALTEK ENGINEERING PTE. LTD."*
@@ -164,16 +173,16 @@ The website explicitly and consistently identifies the following corporate relat
 
 Please verify the following 4 items personally before pointing your domain to the production server:
 
-1. **Changi Business Park Solar Project Authorization**:
-   * *Question*: Did REALTEK ENGINEERING perform the rooftop solar installation at Changi Business Park, and do you have client approval to publish the name and description?
-   * *Action*: If yes, no change is needed. If no, notify us to remove the reference.
+1. **Changi Business Park Solar Project Authorization & Details**:
+   * *Question*: Please supply the verified project year, capacity, scope of work, and project photographs for Changi Business Park Solar Grid.
+   * *Action*: Update `src/data/projects.js` when confirmed details are available.
 
 2. **D-U-N-S Number Confirmation**:
    * *Question*: Has a D-U-N-S number been assigned to **REALTEK ENGINEERING PTE. LTD.** for Apple Developer / Google Play organization accounts?
    * *Action*: Confirm the D-U-N-S number matches ACRA corporate registration records.
 
 3. **Corporate Registered Address & Phone Number**:
-   * *Question*: Are `132 Gul Circle, Singapore 629597` and `+65 9029 1433` your official public corporate address and telephone number?
+   * *Question*: Are `132 Gul Circle, Singapore 629597` and `+65 9029 1433` (Mobile / Direct Line) your official public corporate address and contact number?
    * *Action*: Confirm or provide any updated contact numbers.
 
 4. **Legal Documents Review**:
@@ -181,50 +190,24 @@ Please verify the following 4 items personally before pointing your domain to th
 
 ---
 
-## 9. ISSUES & WARNINGS
-
-* **No Unresolved Technical Errors**: Zero console errors, zero broken links, zero secret leaks.
-* **Contact Form Delivery**: Currently frontend demo feedback only; requires backend cloud email worker if automated email dispatch is needed.
-* **Minor Pending Authorization**: The project reference *Changi Business Park Solar Grid* carries an inline disclaimer until confirmed by the owner.
-
----
-
-## 10. FILES MODIFIED / CREATED
+## 9. FILES MODIFIED / CREATED
 
 | File Path | Status | Purpose |
 | :--- | :---: | :--- |
-| [`index.html`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/index.html) | Modified | Updated Homepage with hero banner, 4 services, ezy SaaS grid, portfolio split, and quote form. |
-| [`about/index.html`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/about/index.html) | Modified | Corporate About Us page explaining Realtek, ezy SaaS, and ezyHR. |
-| [`ezy-saas/index.html`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/ezy-saas/index.html) | Modified | ezy SaaS technology initiative page highlighting products and ownership. |
-| [`ezyhr/index.html`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/ezyhr/index.html) | Modified | ezyHR product landing page with portal link (`https://hr.ezy.sg/`) and features. |
-| [`privacy/index.html`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/privacy/index.html) | Modified | Singapore PDPA-compliant Privacy Policy. |
-| [`terms/index.html`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/terms/index.html) | Modified | Corporate Terms of Use under Singapore law. |
-| [`style.css`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/style.css) | Modified | Modern corporate CSS styling, palette variables, 8px rounded cards, and navy footer. |
-| [`public/sitemap.xml`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/public/sitemap.xml) | Modified | XML Sitemap for search engines. |
-| [`public/robots.txt`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/public/robots.txt) | Modified | Search engine crawler rules. |
+| [`src/data/projects.js`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/src/data/projects.js) | Modified | Updated Changi Solar to strictly confirmed info and removed ezyHR from Engineering Projects list. |
+| [`public/projects/changi-business-park-solar/main.svg`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/public/projects/changi-business-park-solar/main.svg) | Modified | Graphic asset reflecting strictly confirmed details for Changi Solar. |
+| [`index.html`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/index.html) | Modified | Visually separated Engineering Projects from Technology Products (ezy SaaS). |
+| [`DOCUMENTATION/REALTEK_WEBSITE_FINAL_QA_REPORT.md`](file:///c:/Users/mathi/Desktop/AntiGravity%20Demos/Realtek%20Website/DOCUMENTATION/REALTEK_WEBSITE_FINAL_QA_REPORT.md) | Modified | Updated report with distinct portfolio structure & strict Changi Solar rules. |
 
 ---
 
-## 11. DEPLOYMENT TECHNICAL SUMMARY
+## 10. DEPLOYMENT TECHNICAL SUMMARY & RECOMMENDATION
 
 * **Production Target URL**: [https://www.realtekengg.com/](https://www.realtekengg.com/)
 * **Git Repository Branch**: `main`
 * **Latest Commit ID**: `2ba9e240cdb6bb098307b29e6f2bc1dc3c026880`
-* **Build Status**: **Build Succeeded** (`cmd /c npm run build` compiled in 161ms)
+* **Build Status**: **Build Succeeded** (`cmd /c npm run build` compiled in 259ms)
 * **Local Development Server**: Running on `http://localhost:5173/`
 
----
-
-## 12. FINAL RECOMMENDATION & DEVELOPER ACCOUNT READINESS
-
-### Should we proceed to Apple Developer & Google Play Organization Accounts?
-
-> **YES, ABSOLUTELY PROCEED.**
->
-> The corporate website now fully satisfies Apple and Google Play Organization Account verification requirements:
-> - **Legal Name**: `REALTEK ENGINEERING PTE. LTD.` is clearly displayed.
-> - **UEN**: `201723665M` is prominently visible in the footer and contact sections.
-> - **Corporate Identity**: Clear corporate ownership statement connecting REALTEK ENGINEERING to ezy SaaS and ezyHR.
-> - **Professional Infrastructure**: Active corporate domain (`realtekengg.com`), dedicated support emails (`support@ezy.sg`, `support@hr.ezy.sg`), and legal documentation pages (`/privacy`, `/terms`).
-
-Once you complete the 4 owner actions in Section 8, the website is 100% ready for live deployment.
+### Final Recommendation: **PROCEED TO DEVELOPER ENROLLMENT**
+The corporate website satisfies all requirements for **Apple Developer Organization** and **Google Play Organization** account verification.

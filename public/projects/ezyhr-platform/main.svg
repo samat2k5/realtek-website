@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#0B1F33"/>
+  <rect x="50" y="50" width="700" height="400" rx="8" fill="#1F6FA8" stroke="#FFFFFF" stroke-dasharray="4,4" stroke-width="1"/>
+  <text x="400" y="210" font-family="sans-serif" font-size="32" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ezyHR</text>
+  <text x="400" y="260" font-family="sans-serif" font-size="20" fill="#E2E8F0" text-anchor="middle">Cloud HRMS &amp; Payroll Platform</text>
+  <text x="400" y="310" font-family="sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">https://hr.ezy.sg/ — REALTEK ENGINEERING PTE. LTD.</text>
+</svg>
