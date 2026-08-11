@@ -52,7 +52,10 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-heading);
     color: var(--color-navy-primary);
     letter-spacing: -0.02em;
@@ -77,7 +80,7 @@ h1, h2, h3, h4 {
 }
 
 #navbar.scrolled {
-    box-shadow: 0 4px 12px rgba(11, 31, 51, 0.05);
+    box-shadow: 0 4px 12px rgba(11, 31, 51, 0.06);
 }
 
 #navbar .container {
@@ -150,9 +153,11 @@ h1, h2, h3, h4 {
 .hamburger.open span:nth-child(1) {
     transform: translateY(8.5px) rotate(45deg);
 }
+
 .hamburger.open span:nth-child(2) {
     opacity: 0;
 }
+
 .hamburger.open span:nth-child(3) {
     transform: translateY(-8.5px) rotate(-45deg);
 }
@@ -207,6 +212,18 @@ h1, h2, h3, h4 {
     color: var(--color-navy-primary);
 }
 
+.btn-outline-white {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #FFFFFF;
+}
+
+.btn-outline-white:hover {
+    background: #FFFFFF;
+    color: var(--color-navy-primary);
+    border-color: #FFFFFF;
+}
+
 .btn-lg {
     padding: 0.9rem 2.2rem;
     font-size: 1.05rem;
@@ -215,6 +232,32 @@ h1, h2, h3, h4 {
 .btn-sm {
     padding: 0.45rem 1.1rem;
     font-size: 0.88rem;
+}
+
+/* Dedicated Navbar Get a Quote Button */
+.btn-nav-quote {
+    padding: 0.52rem 1.62rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 6px;
+    background: var(--color-navy-secondary);
+    color: #FFFFFF !important;
+    border: 1px solid var(--color-navy-secondary);
+    transition: var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    line-height: 1.4;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.btn-nav-quote:hover {
+    background: var(--color-navy-primary);
+    color: #FFFFFF !important;
+    border-color: var(--color-navy-primary);
+    transform: translateY(-1px);
 }
 
 /* Eyebrows & Badges */
@@ -251,71 +294,63 @@ h1, h2, h3, h4 {
 }
 
 /* Scroll Offset Fix */
-#services, #contact, #portfolio, #hero, #ezy-saas {
+#services,
+#contact,
+#portfolio,
+#hero,
+#ezy-saas {
     scroll-margin-top: 85px;
 }
 
-/* Corporate Hero Section */
+/* Industrial Corporate Full-Width Hero Banner */
 #hero {
-    min-height: 85vh;
+    position: relative;
+    min-height: 84vh;
     display: flex;
     align-items: center;
-    position: relative;
-    background: var(--color-bg-main);
-    padding: 120px 0 80px 0;
-    border-bottom: 1px solid var(--color-border);
-}
-
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 4rem;
-    align-items: center;
+    background: linear-gradient(135deg, rgba(11, 31, 51, 0.92) 0%, rgba(16, 28, 41, 0.84) 100%), url('/hero.png');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 140px 0 90px 0;
+    border-bottom: 4px solid var(--color-orange-accent);
 }
 
 .hero-content {
-    max-width: 650px;
+    max-width: 800px;
 }
 
-h1 {
-    font-size: 3.2rem;
-    line-height: 1.15;
-    margin-bottom: 1.25rem;
+.hero-content .eyebrow {
+    color: var(--color-orange-accent);
+    letter-spacing: 2px;
+    font-size: 0.85rem;
     font-weight: 700;
-    color: var(--color-navy-primary);
+    margin-bottom: 1rem;
 }
 
-.highlight-text {
-    color: var(--color-corporate-blue);
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.15;
+    margin-bottom: 1.4rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.hero-content h1 .highlight-text {
+    color: #4DB5FF;
 }
 
 .hero-content p {
-    font-size: 1.15rem;
-    color: var(--color-text-secondary);
-    margin-bottom: 2.2rem;
-    line-height: 1.65;
+    font-size: 1.2rem;
+    color: #E2E8F0;
+    margin-bottom: 2.4rem;
+    line-height: 1.7;
 }
 
 .hero-btns {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
     flex-wrap: wrap;
-}
-
-.hero-image-wrapper {
-    position: relative;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    box-shadow: var(--shadow-subtle);
-    border: 1px solid var(--color-border);
-    background: var(--color-navy-primary);
-}
-
-.hero-image-wrapper img {
-    width: 100%;
-    height: 440px;
-    object-fit: cover;
-    display: block;
 }
 
 /* Section Common Styling */
@@ -476,8 +511,10 @@ section {
 }
 
 .product-tag {
-    font-family: var(--font-brand);
-    font-size: 1.3rem;
+    font-family: var(--font-main);
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     color: var(--color-navy-primary);
 }
 
@@ -559,7 +596,7 @@ section {
     line-height: 1.6;
 }
 
-/* Contact Section */
+/* Corporate Contact & Get a Quote Section */
 #contact {
     background: var(--color-bg-secondary);
     border-top: 1px solid var(--color-border);
@@ -573,7 +610,7 @@ section {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: 3.5rem;
-    align-items: center;
+    align-items: flex-start;
     box-shadow: var(--shadow-subtle);
 }
 
@@ -591,7 +628,7 @@ section {
 .contact-details {
     display: flex;
     flex-direction: column;
-    gap: 0.9rem;
+    gap: 1rem;
 }
 
 .contact-item {
@@ -603,8 +640,8 @@ section {
 }
 
 .contact-icon {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     border-radius: var(--radius-sm);
     background: var(--color-bg-secondary);
     display: flex;
@@ -614,13 +651,68 @@ section {
     flex-shrink: 0;
 }
 
+/* Quote Form Card Placeholder */
+.quote-form-card {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 2.2rem;
+}
+
+.quote-form-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-navy-primary);
+}
+
+.quote-form-card p {
+    font-size: 0.92rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-main);
+    font-size: 0.92rem;
+    background: #FFFFFF;
+    color: var(--color-text-primary);
+    transition: var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-corporate-blue);
+    box-shadow: 0 0 0 3px rgba(31, 111, 168, 0.12);
+}
+
 .btn-whatsapp {
     background: #25D366;
     color: white;
-    font-size: 1.05rem;
-    padding: 1rem 2rem;
+    font-size: 1rem;
+    padding: 0.85rem 1.8rem;
     width: 100%;
-    margin-bottom: 1.2rem;
+    margin-top: 1rem;
     border-radius: var(--radius-md);
 }
 
@@ -631,7 +723,8 @@ section {
 .direct-call {
     color: var(--color-text-secondary);
     text-align: center;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
+    margin-top: 0.8rem;
 }
 
 /* Subpages Styling */
@@ -726,7 +819,8 @@ section {
     color: var(--color-navy-primary);
 }
 
-.legal-container p, .legal-container ul {
+.legal-container p,
+.legal-container ul {
     color: var(--color-text-secondary);
     margin-bottom: 1.2rem;
     line-height: 1.7;
@@ -824,17 +918,12 @@ footer {
     h1 {
         font-size: 2.8rem;
     }
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    .hero-image-wrapper img {
-        height: 360px;
-    }
+
     .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 2.5rem;
     }
+
     .contact-box {
         grid-template-columns: 1fr;
     }
@@ -844,9 +933,11 @@ footer {
     h1 {
         font-size: 2.3rem;
     }
+
     .hamburger {
         display: flex;
     }
+
     .nav-links {
         position: fixed;
         top: 65px;
@@ -861,18 +952,26 @@ footer {
         transition: transform 0.3s ease;
         z-index: 999;
     }
+
     .nav-links.active {
         transform: translateY(0);
     }
-    .services-grid, .portfolio-grid, .saas-grid, .feature-grid {
+
+    .services-grid,
+    .portfolio-grid,
+    .saas-grid,
+    .feature-grid {
         grid-template-columns: 1fr;
     }
+
     .footer-grid {
         grid-template-columns: 1fr;
     }
+
     .contact-box {
         padding: 2.2rem 1.4rem;
     }
+
     .legal-container {
         padding: 2rem 1.4rem;
     }
