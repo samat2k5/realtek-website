@@ -5,94 +5,142 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Realtek Engineering Pte Ltd | Power & Intelligence</title>
+    <title>REALTEK ENGINEERING PTE. LTD. | Engineering & Digital Solutions</title>
     <meta name="description"
-        content="Leading provider of Solar Panel Installation, Electrical Control Panels, E&I Services, and modern IT solutions including HRMS and Digital Marketing." />
+        content="REALTEK ENGINEERING PTE. LTD. provides Solar, Electrical, Digital and Technology Solutions in Singapore, including EZY SaaS and ezyHR." />
+    <link rel="canonical" href="https://www.realtekengg.com/" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="REALTEK ENGINEERING PTE. LTD. | Engineering & Digital Solutions" />
+    <meta property="og:description"
+        content="REALTEK ENGINEERING PTE. LTD. provides Solar, Electrical, Digital and Technology Solutions in Singapore, including EZY SaaS and ezyHR." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.realtekengg.com/" />
+    <meta property="og:image" content="https://www.realtekengg.com/logo.png" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/style.css" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "REALTEK ENGINEERING PTE. LTD.",
+      "url": "https://www.realtekengg.com/",
+      "logo": "https://www.realtekengg.com/logo.png",
+      "email": "admin@realtekengg.com",
+      "telephone": "+6590291433",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "132 Gul Circle",
+        "addressLocality": "Singapore",
+        "postalCode": "629597",
+        "addressCountry": "SG"
+      }
+    }
+    </script>
 </head>
 
 <body>
     <div id="app">
+        <!-- Navigation -->
         <nav id="navbar">
             <div class="container">
-                <div class="logo">
-                    <img src="/logo.png" alt="Realtek Logo">
+                <a href="/" class="logo">
+                    <img src="/logo.png" alt="Realtek Engineering Logo">
                     <span class="logo-text">Realtek</span>
-                </div>
-                <ul class="nav-links">
+                </a>
+                
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-links" id="nav-links">
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="/ezy-saas/index.html">EZY SaaS</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact" class="btn btn-primary">Get a Quote</a></li>
                 </ul>
-                <button class="btn btn-primary">Get a Quote</button>
             </div>
         </nav>
 
+        <!-- Hero Section -->
         <section id="hero">
             <div class="hero-overlay"></div>
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="fade-in">Powering Industry,<br><span class="highlight">Driving Intelligence.</span></h1>
-                    <p class="fade-in-delay">Realtek Engineering Pte Ltd delivers world-class Solar, Electrical, and
-                        Digital Solutions for a sustainable future.</p>
+                    <span class="eyebrow fade-in">INTEGRATED ENGINEERING & DIGITAL SOLUTIONS</span>
+                    <h1 class="fade-in">POWERING INDUSTRY,<br><span class="highlight">DRIVING INTELLIGENCE.</span></h1>
+                    <p class="fade-in-delay">REALTEK ENGINEERING PTE. LTD. delivers integrated Solar, Electrical, Digital and Technology Solutions for a smarter, more sustainable future.</p>
                     <div class="hero-btns fade-in-delay-2">
                         <a href="#services" class="btn btn-primary btn-lg">Explore Services</a>
-                        <a href="#it-solutions" class="btn btn-outline btn-lg">IT & Software</a>
+                        <a href="/ezy-saas/index.html" class="btn btn-outline btn-lg">Explore EZY SaaS</a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Services / Core Expertise -->
         <section id="services">
             <div class="container">
                 <div class="section-header">
+                    <span class="eyebrow">CAPABILITIES</span>
                     <h2>Our Core Expertise</h2>
-                    <p>Bridging the gap between heavy engineering and digital innovation.</p>
+                    <p>Bridging the gap between heavy industrial engineering and cloud digital innovation.</p>
                 </div>
                 <div class="services-grid">
+                    <!-- Card 1: Solar -->
                     <div class="service-card" id="solar">
                         <div class="card-icon">☀️</div>
                         <h3>Solar & Sustainability</h3>
-                        <p>Specialized in large-scale Solar Panel installation, structural routing, and renewable energy
-                            integration for industrial facilities.</p>
+                        <p>Specialized in large-scale Solar Panel installation, structural routing, and renewable energy integration for industrial facilities.</p>
                         <ul class="service-list">
                             <li>Industrial Rooftop Solar</li>
                             <li>Cable Routing & Management</li>
                             <li>System Maintenance</li>
                         </ul>
                     </div>
+
+                    <!-- Card 2: Electrical -->
                     <div class="service-card" id="electrical">
                         <div class="card-icon">⚡</div>
                         <h3>Electrical & Instrumentation</h3>
-                        <p>Full-scale E&I services including control panel installation and high-density cable tray
-                            routing.</p>
+                        <p>Full-scale E&I services including control panel installation and high-density cable tray routing.</p>
                         <ul class="service-list">
                             <li>Control Panel Installation</li>
                             <li>Industrial Cable Routing</li>
                             <li>Instrumentation & Controls</li>
                         </ul>
                     </div>
+
+                    <!-- Card 3: EZY SaaS & Digital Solutions -->
                     <div class="service-card" id="it-solutions">
                         <div class="card-icon">💻</div>
-                        <h3>Digital Solutions</h3>
-                        <p>Custom software engineering and enterprise-grade tools to streamline your business
-                            operations.</p>
+                        <h3>EZY SaaS &<br>Digital Solutions</h3>
+                        <p>Custom software engineering and cloud-based business solutions designed to streamline modern business operations.</p>
                         <ul class="service-list">
-                            <li>Next-Gen HRMS</li>
-                            <li>Accounting Software</li>
+                            <li>ezyHR — HRMS & Payroll</li>
+                            <li>ezyBooks — Accounting (Coming Soon)</li>
+                            <li>Enterprise Software</li>
                             <li>Premium Web Development</li>
                         </ul>
+                        <a href="/ezy-saas/index.html" class="card-link">Explore EZY SaaS &rarr;</a>
                     </div>
+
+                    <!-- Card 4: Digital Marketing -->
                     <div class="service-card" id="marketing">
                         <div class="card-icon">📈</div>
                         <h3>Digital Marketing</h3>
-                        <p>Data-driven marketing strategies to amplify your brand presence and drive consistent
-                            industrial growth.</p>
+                        <p>Data-driven marketing strategies to amplify your brand presence and drive consistent industrial growth.</p>
                         <ul class="service-list">
                             <li>SEO & SEM Optimization</li>
                             <li>Social Media Strategy</li>
@@ -103,37 +151,125 @@
             </div>
         </section>
 
+        <!-- New EZY SaaS Section -->
+        <section id="ezy-saas">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">OUR TECHNOLOGY INITIATIVE</span>
+                    <h2>EZY SaaS</h2>
+                    <p>Business Software. Simplified.</p>
+                    <p style="font-size: 1rem; margin-top: 0.8rem; color: #94A3B8;">
+                        EZY SaaS is a technology initiative of <strong>REALTEK ENGINEERING PTE. LTD.</strong>, developing practical, secure and scalable cloud-based business applications for modern businesses.
+                    </p>
+                </div>
+
+                <div class="saas-grid">
+                    <!-- ezyHR -->
+                    <div class="saas-card">
+                        <div class="saas-card-header">
+                            <span class="product-tag">ezyHR</span>
+                            <span class="badge badge-active">Active Product</span>
+                        </div>
+                        <h3>Cloud HRMS & Payroll for Singapore Businesses</h3>
+                        <p>Manage employees, attendance, leave, payroll, claims, documents and HR operations from one secure platform.</p>
+                        <div class="saas-card-footer">
+                            <a href="/ezyhr/index.html" class="btn btn-primary btn-sm">Explore ezyHR &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- ezyBooks -->
+                    <div class="saas-card">
+                        <div class="saas-card-header">
+                            <span class="product-tag">ezyBooks</span>
+                            <span class="badge badge-coming-soon">Coming Soon</span>
+                        </div>
+                        <h3>Cloud Accounting & Finance</h3>
+                        <p>A future EZY SaaS solution designed to simplify accounting and financial management for businesses.</p>
+                        <div class="saas-card-footer">
+                            <span class="badge badge-coming-soon">In Development</span>
+                        </div>
+                    </div>
+
+                    <!-- ezyCRM -->
+                    <div class="saas-card">
+                        <div class="saas-card-header">
+                            <span class="product-tag">ezyCRM</span>
+                            <span class="badge badge-coming-soon">Coming Soon</span>
+                        </div>
+                        <h3>Customer Relationship Management</h3>
+                        <p>A future EZY SaaS solution designed to help businesses manage customers, leads and relationships.</p>
+                        <div class="saas-card-footer">
+                            <span class="badge badge-coming-soon">In Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ownership-notice">
+                    EZY SaaS products are developed and operated by <strong>REALTEK ENGINEERING PTE. LTD.</strong>, Singapore.
+                </div>
+
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <a href="/ezy-saas/index.html" class="btn btn-outline">Explore EZY SaaS Initiative &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio / Recent Projects -->
         <section id="portfolio">
             <div class="container">
                 <div class="section-header">
+                    <span class="eyebrow">PORTFOLIO</span>
                     <h2>Recent Projects</h2>
-                    <p>A showcase of our multidisciplinary excellence.</p>
+                    <p>A showcase of our multidisciplinary engineering and software excellence.</p>
                 </div>
                 <div class="portfolio-grid">
                     <div class="portfolio-item">
                         <div class="portfolio-label">Solar & Electrical</div>
                         <h3>Changi Business Park Solar Grid</h3>
+                        <p class="portfolio-desc">High-efficiency rooftop solar panel installation and high-density electrical grid integration.</p>
                     </div>
                     <div class="portfolio-item">
-                        <div class="portfolio-label">Software</div>
-                        <h3>Enterprise HRMS for Logistics Hub</h3>
+                        <div class="portfolio-label">Software & SaaS</div>
+                        <h3>ezyHR — Cloud HRMS & Payroll Platform</h3>
+                        <p class="portfolio-desc">Comprehensive Singapore statutory payroll, leave management, and employee self-service platform. (Status: SaaS Platform)</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact">
             <div class="container">
-                <div class="contact-box glass">
+                <div class="contact-box">
                     <div class="contact-info">
+                        <span class="eyebrow">GET IN TOUCH</span>
                         <h2>Let's Start a Project</h2>
-                        <p>Ready to power or digitize your business? Our experts are here to help.</p>
+                        <p>Ready to power or digitize your business? Our engineering and technology teams are here to help.</p>
                         <div class="contact-details">
-                            <div class="detail">📍 132 Gul Circle, Singapore 629597</div>
-                            <div class="detail">📧 admin@realtekengg.com</div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📍</span>
+                                <div><strong>Address:</strong> 132 Gul Circle, Singapore 629597</div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <div><strong>Corporate Email:</strong> admin@realtekengg.com</div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">💻</span>
+                                <div><strong>EZY SaaS Support:</strong> support@ezy.sg</div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">👥</span>
+                                <div><strong>ezyHR Support:</strong> support@hr.ezy.sg</div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">🌐</span>
+                                <div><strong>ezyHR Portal:</strong> <a href="https://hr.ezy.sg/" target="_blank" style="color: var(--color-cyan);">hr.ezy.sg</a></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-action">
+
+                    <div class="contact-action" style="text-align: center;">
                         <a href="https://wa.me/6590291433?text=Hi%20Realtek%20Engineering%2C%20I%20would%20like%20to%20enquire%20about%20your%20services.%20Please%20advise."
                             target="_blank" class="btn btn-whatsapp">
                             <span class="whatsapp-icon">💬</span> Chat with us on WhatsApp
@@ -144,11 +280,50 @@
             </div>
         </section>
 
+        <!-- Footer -->
         <footer>
             <div class="container">
-                <div class="footer-content">
-                    <div class="footer-logo">Realtek</div>
-                    <p>&copy; 2026 Realtek Engineering Pte Ltd. All Rights Reserved.</p>
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <span class="logo-text">Realtek</span>
+                        <p><strong>REALTEK ENGINEERING PTE. LTD.</strong></p>
+                        <p style="margin-top: 0.5rem;">Delivering world-class Solar, Electrical, and Cloud SaaS Solutions in Singapore.</p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="#hero">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>EZY SaaS</h4>
+                        <ul class="footer-links">
+                            <li><a href="/ezy-saas/index.html">EZY SaaS Overview</a></li>
+                            <li><a href="/ezyhr/index.html">ezyHR (HRMS & Payroll)</a></li>
+                            <li><a href="/ezy-saas/index.html">ezyBooks (Coming Soon)</a></li>
+                            <li><a href="/ezy-saas/index.html">ezyCRM (Coming Soon)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Support & Legal</h4>
+                        <ul class="footer-links">
+                            <li><a href="mailto:support@ezy.sg">EZY SaaS Support</a></li>
+                            <li><a href="mailto:support@hr.ezy.sg">ezyHR Support</a></li>
+                            <li><a href="/privacy/index.html">Privacy Policy</a></li>
+                            <li><a href="/terms/index.html">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 REALTEK ENGINEERING PTE. LTD. All Rights Reserved.</p>
+                    <p>Singapore UEN / Registered Entity</p>
                 </div>
             </div>
         </footer>
