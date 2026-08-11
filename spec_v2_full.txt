@@ -1,0 +1,440 @@
+REALTEK ENGINEERING PTE. LTD.
+PUBLIC WEBSITE — DEVELOPER SPECIFICATION
+EZY SaaS + ezyHR Integration & Corporate Verification Readiness
+Version 2.0 | Based on live website review | August 2026
+DEVELOPER INSTRUCTION
+Do NOT redesign the website from scratch. The current visual direction is good. Refine the existing React/Tailwind implementation, correct the content/structure below, and make the site clearly communicate the relationship:
+REALTEK ENGINEERING PTE. LTD.  →  EZY SaaS  →  ezyHR
+1. Purpose and Business Objective
+The public website must function as the authoritative corporate website for REALTEK ENGINEERING PTE. LTD. It must present the company primarily as a Singapore engineering and technology business while clearly introducing EZY SaaS as a technology initiative and ezyHR as its first active SaaS product.
+The site must look like a genuine operating company website, not a site created only for app-store verification.
+The legal entity name must be consistent everywhere.
+The relationship between Realtek, EZY SaaS and ezyHR must be immediately understandable.
+Do not make unsupported claims about certification, approval, customers, projects or statutory compliance.
+2. Live Website Baseline — Keep What Is Working
+The current live website already contains the following elements and should be retained unless specifically changed below:
+Current Element
+Decision
+Modern dark engineering/technology visual design
+KEEP
+Hero: “POWERING INDUSTRY, DRIVING INTELLIGENCE.”
+KEEP
+Services / Projects / EZY SaaS / Contact / Get a Quote navigation
+KEEP
+Solar & Sustainability card
+KEEP
+Electrical & Instrumentation card
+KEEP
+EZY SaaS & Digital Solutions card
+KEEP; refine wording
+Digital Marketing card
+KEEP
+EZY SaaS product family section
+KEEP; refine structure
+ezyHR / ezyBooks / ezyCRM positioning
+KEEP; refine claims
+Singapore corporate address and contact structure
+KEEP after verification
+Privacy Policy / Terms of Use links
+KEEP; verify that pages are substantive
+Existing WhatsApp/call CTA
+KEEP after verifying the destination/number
+3. Required Final Information Architecture
+Page / Route
+Purpose
+Priority
+/
+Corporate home / primary company identity
+P0
+/about
+Company, ownership and EZY SaaS relationship
+P0
+/services
+Engineering and digital services
+P1
+/projects
+Verified projects / products
+P1
+/ezy-saas
+EZY SaaS overview
+P0
+/ezyhr
+ezyHR product landing page
+P0
+/contact
+Corporate + SaaS contact
+P1
+/privacy
+Website privacy policy
+P0
+/terms
+Website terms of use
+P0
+Prefer real crawlable routes/pages rather than relying only on single-page anchor sections. The homepage can still contain anchor links for a smooth experience.
+4. Brand and Ownership Rules
+Item
+Required treatment
+Legal entity
+REALTEK ENGINEERING PTE. LTD.
+Corporate brand
+Realtek / REALTEK ENGINEERING
+Technology initiative
+EZY SaaS
+Active SaaS product
+ezyHR
+Future product
+ezyBooks — Coming Soon
+Future product
+ezyCRM — Coming Soon
+Corporate website
+https://www.realtekengg.com/
+EZY SaaS brand/domain
+https://ezy.sg/
+ezyHR application
+https://hr.ezy.sg/
+EZY SaaS support
+support@ezy.sg
+ezyHR support
+support@hr.ezy.sg
+IMPORTANT: Do not describe EZY SaaS as a separate company unless a separate legal entity is actually incorporated. Use “technology initiative of REALTEK ENGINEERING PTE. LTD.”
+5. Header / Navigation
+Target desktop navigation:
+Realtek | Services | Projects | EZY SaaS | Contact | Get a Quote
+EZY SaaS links to /ezy-saas.
+Get a Quote remains the primary CTA.
+Mobile navigation must contain the same destinations.
+Do not remove the EZY SaaS navigation item.
+Keep the current visual language; do not introduce a second unrelated navigation design.
+6. Homepage — Hero Section
+Element
+Approved Content
+Eyebrow
+INTEGRATED ENGINEERING & DIGITAL SOLUTIONS
+H1
+POWERING INDUSTRY,DRIVING INTELLIGENCE.
+Body
+REALTEK ENGINEERING PTE. LTD. delivers integrated Solar, Electrical, Digital and Technology Solutions for a smarter, more sustainable future.
+Primary CTA
+Explore Services
+Secondary CTA
+Explore EZY SaaS
+Keep the existing hero visual treatment if the image is properly licensed.
+Ensure text remains readable on mobile.
+Use exactly one H1 on the homepage.
+7. Core Expertise — Final Copy
+Card
+Title
+Body / Bullets
+01
+Solar & Sustainability
+Specialized in large-scale Solar Panel installation, structural routing, and renewable energy integration for industrial facilities.• Industrial Rooftop Solar• Cable Routing & Management• System Maintenance
+02
+Electrical & Instrumentation
+Full-scale E&I services including control panel installation and high-density cable tray routing.• Control Panel Installation• Industrial Cable Routing• Instrumentation & Controls
+03
+EZY SaaS & Digital Solutions
+Custom software engineering and cloud-based business solutions designed to streamline modern business operations.• ezyHR — HRMS & Payroll• ezyBooks — Accounting (Coming Soon)• Enterprise Software• Premium Web Development
+04
+Digital Marketing
+Data-driven marketing strategies to amplify your brand presence and drive consistent industrial growth.• SEO & SEM Optimization• Social Media Strategy• Lead Gen Campaigns
+Add “Explore EZY SaaS →” inside Card 03 linking to /ezy-saas.
+8. EZY SaaS Section — Final Copy
+Element
+Approved Content
+Eyebrow
+OUR TECHNOLOGY INITIATIVE
+H2
+EZY SaaS
+Subtitle
+Business Software. Simplified.
+Intro
+EZY SaaS is a technology initiative of REALTEK ENGINEERING PTE. LTD., developing practical, secure and scalable cloud-based business applications for modern businesses.
+Ownership line
+EZY SaaS products are developed and operated by REALTEK ENGINEERING PTE. LTD., Singapore.
+8.1 Product Cards
+Product
+Status
+Approved positioning
+CTA
+ezyHR
+ACTIVE PRODUCT
+Cloud HRMS & Payroll for Singapore Businesses. Manage employees, attendance, leave, payroll, claims, documents and HR operations from one secure platform.
+Explore ezyHR → /ezyhr
+ezyBooks
+COMING SOON
+A future EZY SaaS solution designed to simplify accounting and financial management for businesses.
+Coming Soon
+ezyCRM
+COMING SOON
+A future EZY SaaS solution designed to help businesses manage customers, leads and relationships.
+Coming Soon
+9. CRITICAL ezyHR Wording Change
+CURRENT LIVE WORDING TO REMOVE/REPLACE:
+“Comprehensive Singapore statutory payroll, leave management, and employee self-service platform.”
+Reason: this wording can be read as a strong statutory/compliance claim. Until the applicable IRAS/AIS status is formally established, avoid wording that could imply certification, approval, endorsement or official compliance status.
+RECOMMENDED REPLACEMENT:
+“Cloud-based HRMS and payroll platform designed for Singapore businesses.”
+Optional longer version:
+“Cloud-based HRMS and payroll platform designed for Singapore businesses, with features to support local payroll and HR administration requirements.”
+Never use “IRAS Certified”, “IRAS Approved”, “IRAS Endorsed” or equivalent unless the legal/compliance team has confirmed the exact status and wording.
+Only advertise features that exist in the production application.
+10. ezyHR Dedicated Page — /ezyhr
+Element
+Specification
+Eyebrow
+EZY SAAS
+H1
+ezyHR
+Headline
+Cloud HRMS & Payroll for Singapore Businesses
+Tagline
+Simplify HR. Streamline Payroll. Empower Your People.
+Ownership
+ezyHR is an EZY SaaS product developed and operated by REALTEK ENGINEERING PTE. LTD., Singapore.
+Primary CTA
+Visit ezyHR → https://hr.ezy.sg/
+Support CTA
+Contact ezyHR Support → support@hr.ezy.sg
+10.1 Feature Grid
+Employee Management — employee profiles, employment information, documents and HR records.
+Attendance — attendance/work records and administration.
+Leave Management — leave applications, approvals, balances and reporting.
+Payroll — payroll processing and payslip generation, subject to actual production functionality.
+Claims — employee claims submission and approval workflows, subject to actual production functionality.
+Employee Self-Service — employee access to relevant HR functions.
+Reports — HR/payroll reporting, subject to actual production functionality.
+Singapore-focused — designed for Singapore business requirements.
+Developer must reconcile this list against the actual ezyHR application before publication. If a feature is not production-ready, label it “Coming Soon” or remove it.
+11. About Page — Required Content
+Add a clear About section/page that answers: Who is Realtek? What does it do? Where is it based? What is EZY SaaS? Who operates ezyHR?
+Recommended copy:
+REALTEK ENGINEERING PTE. LTD. is a Singapore-based engineering and technology company providing Solar, Electrical & Instrumentation, Digital Solutions and technology services to businesses.
+Through our EZY SaaS initiative, Realtek develops cloud-based business applications designed to simplify everyday business operations. ezyHR is our first SaaS product, providing HRMS and payroll capabilities for Singapore businesses.
+Add verified corporate information such as the registered company name, Singapore location and, if the company elects to publish it, the exact UEN from official ACRA records.
+12. Projects Section — Important Correction
+Change the section heading:
+Recent Projects
+TO:
+Selected Projects & Products
+Engineering projects should be genuine, completed/active projects that Realtek is authorised to reference.
+ezyHR should be classified as a SaaS Product, not presented as a client project.
+Do not publish fictional case studies or unsupported customer claims.
+If “Changi Business Park Solar Grid” is a genuine Realtek project and publication is authorised, keep it. Otherwise replace/remove it.
+If an HRMS project is a genuine client project, identify it accurately; otherwise use ezyHR as a product entry.
+13. Contact Section — Final Structure
+Contact
+Value / Action
+Corporate
+admin@realtekengg.com — verify exact address
+EZY SaaS Support
+support@ezy.sg
+ezyHR Support
+support@hr.ezy.sg
+ezyHR Portal
+https://hr.ezy.sg/
+Address
+132 Gul Circle, Singapore 629597 — verify against official company records
+Phone
++65 9029 1433 — verify before publication
+WhatsApp
+Existing WhatsApp CTA — verify destination before publication
+14. Footer — Final Structure
+REALTEK ENGINEERING PTE. LTD.SingaporeEngineering | EZY SaaSEZY SaaS• ezyHR• ezyBooks — Coming Soon• ezyCRM — Coming SoonCompany• About Us• Services• Projects• ContactSupport & Legal• EZY SaaS Support• ezyHR Support• Privacy Policy• Terms of Use© 2026 REALTEK ENGINEERING PTE. LTD. All Rights Reserved.
+Replace the current generic footer tagline “Delivering world-class Solar, Electrical, and Cloud SaaS Solutions in Singapore.” with:
+“Delivering integrated engineering, digital and cloud SaaS solutions in Singapore.”
+15. UEN / Registered Entity
+The current live page contains a “Singapore UEN / Registered Entity” footer label but no visible UEN value. This must be resolved.
+Developer must NOT invent or guess the UEN.
+Obtain the exact UEN from the company/ACRA record supplied by the owner.
+If the company chooses to publish it, display: “UEN: [verified UEN]”.
+Ensure legal name/address are consistent with official records.
+16. Privacy Policy and Terms of Use
+The links already exist on the live website. Verify that they lead to substantive pages rather than placeholder text.
+16.1 Privacy Policy minimum topics
+Website visitor data
+Contact forms and enquiries
+Cookies/analytics
+Email communications
+Third-party services
+Data retention
+Security
+User rights / applicable Singapore requirements
+Corporate contact information
+16.2 Terms minimum topics
+Website use
+Intellectual property
+EZY SaaS information
+ezyHR information
+Third-party links
+Disclaimers
+Limitation of liability
+Applicable law
+Contact
+The ezyHR application's own SaaS Terms of Service and Privacy Policy should later be maintained separately and be much more detailed because the application handles employee/HR data.
+17. SEO — Required
+Page
+SEO Title
+Meta Description
+/
+REALTEK ENGINEERING PTE. LTD. | Engineering, Digital & SaaS Solutions
+REALTEK ENGINEERING PTE. LTD. provides Solar, Electrical, Digital and Technology Solutions in Singapore, including EZY SaaS and ezyHR.
+/ezy-saas
+EZY SaaS | Business Software by REALTEK ENGINEERING PTE. LTD.
+EZY SaaS is the technology initiative of REALTEK ENGINEERING PTE. LTD., developing practical cloud business applications including ezyHR.
+/ezyhr
+ezyHR | Cloud HRMS & Payroll for Singapore Businesses
+ezyHR is a cloud HRMS and payroll platform developed by REALTEK ENGINEERING PTE. LTD. for Singapore businesses.
+/about
+About REALTEK ENGINEERING PTE. LTD. | Singapore
+Learn about REALTEK ENGINEERING PTE. LTD., its engineering capabilities and EZY SaaS technology initiative.
+/contact
+Contact REALTEK ENGINEERING PTE. LTD. | Singapore
+Contact Realtek Engineering for engineering, digital solutions, EZY SaaS and ezyHR enquiries.
+One canonical URL per indexable page.
+Create sitemap.xml including all public pages.
+Create robots.txt.
+Ensure production pages are indexable unless intentionally private.
+Add Open Graph metadata for each page.
+Add Organization JSON-LD for REALTEK ENGINEERING PTE. LTD.
+Add appropriate Product/SoftwareApplication structured data for ezyHR only when product information is accurate.
+18. React + Tailwind Implementation
+Reuse the current component system and styling rather than rebuilding the visual design.
+Create reusable components: Header, Hero, SectionHeading, ExpertiseCard, SaaSProductCard, ProjectCard, ContactCTA and Footer.
+Use semantic HTML: header, nav, main, section, article, footer.
+Use real anchor/link elements for navigation.
+Keep page content maintainable through data objects/configuration where practical.
+Use responsive Tailwind utilities.
+Do not put secrets, API keys, database credentials or private application endpoints in frontend code.
+Keep the corporate website deployment separate from the ezyHR application/backend.
+19. Responsive Requirements
+Viewport
+Requirement
+320–390px
+Single column; hamburger menu; full-width/comfortable CTAs; no horizontal scrolling.
+640–1024px
+Two-column cards where space allows; responsive navigation.
+≥1024px
+Existing two-column card layout and full navigation.
+≥1280px
+Constrain content width; avoid excessive line length.
+Test at 320, 375, 390, 768, 1024, 1440 and 1920 px widths.
+Test iOS Safari, Android Chrome, desktop Chrome and Edge.
+20. Accessibility
+Use meaningful alt text for non-decorative images.
+Maintain sufficient color contrast.
+Keyboard navigation must reach every interactive element.
+Visible focus states are required.
+Use a correct H1 → H2 → H3 hierarchy.
+Mobile navigation should expose appropriate aria-expanded/aria-controls states.
+Do not rely on color alone for status.
+Ensure mailto/tel/external links are usable.
+21. Performance & Security
+Optimize hero/background images; prefer WebP/AVIF where supported.
+Lazy-load below-the-fold images where appropriate.
+Set image dimensions/aspect ratios to reduce layout shift.
+Avoid unnecessary JavaScript libraries.
+Target strong Core Web Vitals on mobile.
+Force HTTPS.
+Use security headers where practical.
+Keep dependencies patched.
+Do not expose Resend, Zoho, Railway, database, JWT, encryption or other private configuration.
+22. Apple / Google Verification Readiness
+The purpose is not to create a verification-only website. The purpose is to make the existing corporate site accurately represent the legal organization and its SaaS products.
+Requirement / check
+Developer action
+Legal identity
+Use REALTEK ENGINEERING PTE. LTD. consistently.
+Corporate website
+Keep public, functional and professional.
+Ownership relationship
+Explicitly state EZY SaaS is a technology initiative of Realtek.
+Product relationship
+Explicitly state ezyHR is developed/operated by Realtek through EZY SaaS.
+Company contact
+Use corporate-domain email addresses.
+Address
+Display only verified company address.
+UEN
+Add only if verified and approved for publication.
+Privacy / Terms
+Provide real, accessible pages.
+Product claims
+Use only factual, supportable claims.
+D-U-N-S / app accounts
+These are company/account administration tasks, not website coding tasks; website data must match official company records.
+Apple Developer: https://developer.apple.com/programs/enroll/
+Google Play organization information: https://support.google.com/googleplay/android-developer/answer/13634885
+23. IRAS / Payroll Compliance Messaging
+Until the applicable IRAS/AIS software-vendor status has been formally established, the public website should use conservative language.
+DO
+DO NOT
+Designed for Singapore businesses
+IRAS Certified
+Designed to support Singapore payroll requirements
+IRAS Approved
+Supports payroll/HR administration requirements
+IRAS Endorsed
+AIS readiness / submission support only when technically and legally accurate
+Guaranteed IRAS compliance
+Any future IRAS/AIS claim must be reviewed against the exact current IRAS requirements and the product's actual technical status before publication.
+24. Recommended Final Homepage Flow
+Hero — Realtek corporate identity.
+Core Expertise — Solar, Electrical, EZY SaaS & Digital Solutions, Digital Marketing.
+EZY SaaS — explain initiative and ownership.
+ezyHR — highlight the active product.
+ezyBooks/ezyCRM — clearly marked Coming Soon.
+Selected Projects & Products — genuine projects/products only.
+About Realtek — corporate identity and technology initiative.
+Contact — corporate + EZY + ezyHR.
+Footer — Company, EZY SaaS, Support & Legal.
+25. Acceptance Criteria — Developer Must Complete
+EZY SaaS appears in desktop and mobile navigation.
+Homepage clearly identifies REALTEK ENGINEERING PTE. LTD.
+Homepage clearly states EZY SaaS is a technology initiative of Realtek.
+Homepage clearly identifies ezyHR as an active EZY SaaS product.
+Dedicated /ezy-saas page exists.
+Dedicated /ezyhr page exists.
+ezyHR links to https://hr.ezy.sg/.
+ezyHR support links to support@hr.ezy.sg.
+EZY SaaS support links to support@ezy.sg.
+Current statutory-payroll wording is replaced with approved conservative wording.
+Projects section is renamed “Selected Projects & Products”.
+All displayed projects/products are factual and authorised.
+UEN is either correctly displayed or the incomplete placeholder is removed.
+Privacy Policy is a real accessible page.
+Terms of Use is a real accessible page.
+About page contains corporate identity and EZY SaaS relationship.
+SEO titles/descriptions/canonical URLs are implemented.
+Sitemap.xml and robots.txt are implemented.
+Organization structured data is implemented.
+No frontend secrets are exposed.
+HTTPS works with no mixed-content errors.
+No broken links or console errors.
+Mobile layout passes the specified viewport tests.
+Keyboard/accessibility sanity check passes.
+Performance is acceptable on mobile.
+26. Final Developer Instruction
+IMPORTANT — DO NOT OVER-DESIGN
+The current website already has a strong modern engineering/technology look. Do not replace the design with a generic SaaS template. The objective is to refine the existing website so that a visitor, customer, Apple reviewer, Google reviewer or business partner can understand the company structure immediately:
+REALTEK ENGINEERING PTE. LTD.↓EZY SaaS↓ezyHR
+The website should remain credible first as a Singapore engineering company and second as a growing technology/SaaS business.
+27. Owner Review Items Before Production
+Confirm exact legal company name spelling.
+Confirm exact UEN from ACRA.
+Confirm registered/business address.
+Confirm corporate email.
+Confirm phone and WhatsApp destination.
+Confirm that all named projects are genuine and publishable.
+Confirm the exact ezyHR features that are production-ready.
+Confirm ezyHR's current IRAS/AIS status before any compliance wording is published.
+Confirm Privacy Policy and Terms with the appropriate business/legal reviewer.
+28. Change Log
+Version
+Date
+Change
+1.0
+August 2026
+Initial comprehensive website developer specification.
+2.0
+August 2026
+Rebased on live website review; clarified current-state KEEP/CHANGE decisions, added exact content, critical wording correction, route structure, acceptance criteria and verification-readiness requirements.
