@@ -1,130 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>REALTEK ENGINEERING PTE. LTD. | Engineering, Digital & SaaS Solutions</title>
-    <meta name="description"
-        content="REALTEK ENGINEERING PTE. LTD. provides Solar, Electrical, Digital and Technology Solutions in Singapore, including ezy SaaS and ezyHR." />
-    <link rel="canonical" href="https://www.realtekengg.com/" />
+import os
+import shutil
+import re
 
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="REALTEK ENGINEERING PTE. LTD. | Engineering, Digital & SaaS Solutions" />
-    <meta property="og:description"
-        content="REALTEK ENGINEERING PTE. LTD. provides Solar, Electrical, Digital and Technology Solutions in Singapore, including ezy SaaS and ezyHR." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.realtekengg.com/" />
-    <meta property="og:image" content="https://www.realtekengg.com/logo.png" />
+# Backup
+shutil.copy('index.html', 'index.backup.r2.html')
+shutil.copy('style.css', 'style.backup.r2.css')
 
-    <!-- Twitter / X Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="REALTEK ENGINEERING PTE. LTD. | Engineering, Digital & SaaS Solutions" />
-    <meta name="twitter:description" content="REALTEK ENGINEERING PTE. LTD. provides Solar, Electrical, Digital and Technology Solutions in Singapore, including ezy SaaS and ezyHR." />
-    <meta name="twitter:image" content="https://www.realtekengg.com/logo.png" />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/style.css" />
-
-    <!-- JSON-LD Organization Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "REALTEK ENGINEERING PTE. LTD.",
-      "url": "https://www.realtekengg.com/",
-      "logo": "https://www.realtekengg.com/logo.png",
-      "email": "admin@realtekengg.com",
-      "telephone": "+6590291433",
-      "taxID": "201723665M",
-      "vatID": "201723665M",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "132 Gul Circle",
-        "addressLocality": "Singapore",
-        "postalCode": "629597",
-        "addressCountry": "SG"
-      }
-    }
-    </script>
-</head>
-<body>
-    <nav class="c-nav">
-        <div class="c-container nav-inner">
-            <a href="/" class="c-brand">
-                <img src="/logo.png" alt="Realtek Logo" class="c-logo-img">
-                <span class="c-logo-type">Realtek</span>
-            </a>
-            <div class="c-nav-links">
-                <a href="#engineering">Engineering <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
-                <a href="#projects">Projects</a>
-                <a href="#digital">ezy SaaS</a>
-                <a href="/about/index.html">About</a>
-                <a href="#">Insights</a>
-            </div>
-            <a href="#contact" class="c-btn btn-nav">Contact Engineering &rarr;</a>
-        </div>
-    </nav>
-
-    <section class="hero-r13">
-        <div class="hero-r13__content">
-            <div class="hero-r13__copy">
-                <p class="hero-r13__eyebrow">INTEGRATED ENGINEERING & DIGITAL SOLUTIONS</p>
-                <h1 class="hero-r13__title">
-                    <span>POWERING</span>
-                    <span>INDUSTRY.</span>
-                    <span class="accent">DRIVING</span>
-                    <span class="accent">INTELLIGENCE<span class="dot">.</span></span>
-                </h1>
-                <p class="hero-r13__description">
-                    REALTEK ENGINEERING PTE. LTD. delivers integrated Solar, Electrical, Digital and Technology Solutions for businesses in Singapore.
-                </p>
-                <div class="hero-r13__actions">
-                    <a href="#engineering" class="c-btn btn-primary">Explore Engineering &rarr;</a>
-                    <a href="#digital" class="c-btn btn-outline">Explore ezy SaaS &rarr;</a>
-                </div>
-                
-                <div class="hero-r13__trust">
-                    <div class="trust-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                        <div class="trust-text">
-                            <strong>SINGAPORE REGISTERED</strong>
-                            <span>UEN: 201723665M</span>
-                        </div>
-                    </div>
-                    <div class="trust-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                        <div class="trust-text">
-                            <strong>EXPERIENCED ENGINEERING TEAM</strong>
-                            <span>Design - Build - Commission</span>
-                        </div>
-                    </div>
-                    <div class="trust-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                        <div class="trust-text">
-                            <strong>QUALITY & SAFETY DRIVEN</strong>
-                            <span>Reliable. Compliant. Responsible.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="hero-r13__media">
-            <img src="/assets/images/hero/realtek-singapore-solar-hero.png" alt="Singapore skyline at sunrise with solar panels">
-        </div>
-        
-        <aside class="hero-r13__message">
-            Building a sustainable future through engineering excellence and smart technology.
-        </aside>
-    </section>
-
-                
+html_mockup = """
     <!-- ================================================== -->
     <!-- MOCKUP IMPLEMENTATION (BELOW HERO)                 -->
     <!-- ================================================== -->
@@ -273,13 +155,10 @@
                 <div class="m-device-wrapper">
                     <div class="m-desktop-frame">
                         <div class="m-browser-bar"><span></span><span></span><span></span></div>
-                        <img src="/assets/images/ezyHR.jpeg" alt="ezyHR Desktop">
+                        <img src="/assets/images/ezy-saas/ezyHR.jpeg" alt="ezyHR Desktop">
                     </div>
-                    <div class="m-mobile-frame" style="bottom:-20px; right:-30px; z-index:10; width: 28%; box-shadow: 0 30px 60px rgba(0,0,0,0.3);">
-                        <img src="/assets/images/ezyHR_mobile1.jpeg" alt="ezyHR Mobile 1">
-                    </div>
-                    <div class="m-mobile-frame" style="bottom:-40px; left: 18%; z-index:9; width: 25%; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
-                        <img src="/assets/images/ezyHR_mobile2.jpeg" alt="ezyHR Mobile 2">
+                    <div class="m-mobile-frame">
+                        <img src="/assets/images/ezy-saas/ezyHR_mobile1.jpeg" alt="ezyHR Mobile">
                     </div>
                 </div>
             </div>
@@ -287,21 +166,21 @@
                 <div class="m-saas-feat">
                     <div class="m-s-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
                     <div class="m-s-text">
-                        <h4>ezyHR <span class="m-proj-tag tag-active" style="margin-left: 0.5rem; font-size: 0.6rem; vertical-align: middle; background: #fff; color: var(--color-teal); border: 1px solid var(--color-teal);">ACTIVE</span></h4>
+                        <h4>ezyHR</h4>
                         <p>Comprehensive HR management from hire to retire.</p>
                     </div>
                 </div>
                 <div class="m-saas-feat">
                     <div class="m-s-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
                     <div class="m-s-text">
-                        <h4>ezyBooks <span class="m-proj-tag" style="margin-left: 0.5rem; font-size: 0.6rem; background: #cbd5e1; color: #0a192f; vertical-align: middle;">COMING SOON</span></h4>
+                        <h4>ezyBooks</h4>
                         <p>Accounting & Finance made simple and accurate.</p>
                     </div>
                 </div>
                 <div class="m-saas-feat">
                     <div class="m-s-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg></div>
                     <div class="m-s-text">
-                        <h4>ezyCRM <span class="m-proj-tag" style="margin-left: 0.5rem; font-size: 0.6rem; background: #cbd5e1; color: #0a192f; vertical-align: middle;">COMING SOON</span></h4>
+                        <h4>ezyCRM</h4>
                         <p>Manage customer relationships and business growth.</p>
                     </div>
                 </div>
@@ -328,7 +207,7 @@
                     </div>
                     <div class="m-ci-item">
                         <svg class="orange" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        <span>132 Gul Circle<br>Singapore 629597</span>
+                        <span>18 Boon Lay Way #09-142<br>TradeHub 21, Singapore 609966</span>
                     </div>
                 </div>
             </div>
@@ -386,56 +265,70 @@
         </div>
     </section>
 
-        <!-- MOCKUP FOOTER RESTORED -->
-    <footer class="c-footer" style="background: #0f172a; padding: 4rem 0 2rem 0; color: #fff; font-family: var(--font-primary);">
-        <div class="c-container footer-grid" style="display: grid; grid-template-columns: 2fr 1fr 1.2fr 1fr 1fr 1.2fr; gap: 3rem;">
-            <div class="f-brand">
-                <div style="margin-bottom:1.5rem;">
-                    <img src="/Realtek_Logo.png" alt="Realtek Logo" style="filter: brightness(0) invert(1); height: 32px; display: inline-block; vertical-align: middle;">
-                    <span style="font-family: var(--font-logo); font-size: 1.5rem; vertical-align: middle; margin-left:0.5rem; font-weight:700;">Realtek</span>
+    <!-- MOCKUP FOOTER -->
+    <footer class="m-footer">
+        <div class="c-container m-footer-grid">
+            <div class="m-f-col m-f-brand">
+                <div class="c-logo">
+                    <img src="/Realtek_Logo.png" alt="Realtek Logo">
                 </div>
-                <p style="color: rgba(255,255,255,0.8); line-height: 1.8; font-size:0.9rem; margin-bottom:0;">REALTEK ENGINEERING PTE. LTD.<br>UEN: 201723665M<br>132 Gul Circle, Singapore 629597</p>
+                <p class="m-f-desc">REALTEK ENGINEERING PTE. LTD.<br>UEN: 20230693C</p>
+                <p class="m-f-desc">18 Boon Lay Way #09-142,<br>TradeHub 21, Singapore 609966</p>
+                <p class="m-f-desc">&copy; 2024 Realtek Engineering Pte. Ltd.<br>All rights reserved.</p>
             </div>
-            <div class="f-col">
-                <h4 style="font-size: 0.9rem; font-weight: 800; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #fff;">COMPANY</h4>
-                <a href="#about" style="display:block; color:rgba(255,255,255,0.8); text-decoration:none; margin-bottom:0.8rem; font-size:0.9rem;">About Us</a>
-                <a href="#team" style="display:block; color:rgba(255,255,255,0.8); text-decoration:none; margin-bottom:0.8rem; font-size:0.9rem;">Our Team</a>
-                <a href="#careers" style="display:block; color:rgba(255,255,255,0.8); text-decoration:none; margin-bottom:0.8rem; font-size:0.9rem;">Careers</a>
-                <a href="#contact" style="display:block; color:rgba(255,255,255,0.8); text-decoration:none; margin-bottom:0.8rem; font-size:0.9rem;">Contact</a>
+            
+            <div class="m-f-col">
+                <h4>COMPANY</h4>
+                <a href="#about">About Us</a>
+                <a href="#team">Our Team</a>
+                <a href="#careers">Careers</a>
+                <a href="#contact">Contact</a>
             </div>
-            <div class="f-col">
-                <h4 style="font-size: 0.9rem; font-weight: 800; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #fff;">ENGINEERING</h4>
-                <a href="#ci" style="display:block; color:rgba(255,255,255,0.8); text-decoration:none; margin-bottom:0.8rem; font-size:0.9rem;">C&I Solar PV</a>
-                <a href="#ei" style="display:block; color:rgba(255,255,255,0.8); text-decoration:none; margin-bottom:0.8rem; font-size:0.9rem;">Electrical & Inst. (E&I)</a>
-                <a href="#hdb" style="display:block; color:rgba(255,255,255,0.8); text-decoration:none; margin-bottom:0.8rem; font-size:0.9rem;">HDB Solar PV</a>
+            
+            <div class="m-f-col">
+                <h4>ENGINEERING</h4>
+                <a href="#ci">C&I Solar PV</a>
+                <a href="#ei">Electrical & Instrumentation (E&I)</a>
+                <a href="#hdb">HDB Solar PV</a>
             </div>
-            <div class="f-col">
-                <h4 style="font-size: 0.9rem; font-weight: 800; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #fff;">PROJECTS</h4>
-                <a href="#projects" style="display:block; color:rgba(255,255,255,0.8); text-decoration:none; margin-bottom:0.8rem; font-size:0.9rem;">All Projects</a>
-                <a href="#featured" style="display:block; color:rgba(255,255,255,0.8); text-decoration:none; margin-bottom:0.8rem; font-size:0.9rem;">Featured Project</a>
-                <a href="#enquiries" style="display:block; color:rgba(255,255,255,0.8); text-decoration:none; margin-bottom:0.8rem; font-size:0.9rem;">Enquiries</a>
+            
+            <div class="m-f-col">
+                <h4>PROJECTS</h4>
+                <a href="#projects">All Projects</a>
+                <a href="#featured">Featured Project</a>
+                <a href="#enquiries">Project Enquiries</a>
             </div>
-            <div class="f-col">
-                <h4 style="font-size: 0.9rem; font-weight: 800; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #fff;">EZY SAAS</h4>
-                <a href="#ezyhr" style="display:block; color:rgba(255,255,255,0.8); text-decoration:none; margin-bottom:0.8rem; font-size:0.9rem;">ezyHR</a>
-                <a href="#ezybooks" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; margin-bottom:0.8rem; font-size:0.9rem; cursor:default;">ezyBooks</a>
-                <a href="#ezycrm" style="display:block; color:rgba(255,255,255,0.5); text-decoration:none; margin-bottom:0.8rem; font-size:0.9rem; cursor:default;">ezyCRM</a>
+            
+            <div class="m-f-col">
+                <h4>EZY SAAS</h4>
+                <a href="#ezyhr">ezyHR</a>
+                <a href="#ezybooks">ezyBooks</a>
+                <a href="#ezycrm">ezyCRM</a>
             </div>
-            <div class="f-col">
-                <h4 style="font-size: 0.9rem; font-weight: 800; letter-spacing: 0.1em; margin-bottom: 1.5rem; color: #fff;">SUPPORT</h4>
-                <a href="#support" style="display:block; color:rgba(255,255,255,0.8); text-decoration:none; margin-bottom:0.8rem; font-size:0.9rem;">ezyHR Support</a>
-                <a href="#privacy" style="display:block; color:rgba(255,255,255,0.8); text-decoration:none; margin-bottom:0.8rem; font-size:0.9rem;">Privacy Policy</a>
-                <a href="#terms" style="display:block; color:rgba(255,255,255,0.8); text-decoration:none; margin-bottom:0.8rem; font-size:0.9rem;">Terms of Use</a>
+            
+            <div class="m-f-col">
+                <h4>SUPPORT & LEGAL</h4>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#data">Data Protection</a>
             </div>
-        </div>
-        <div class="c-container" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center;">
-            <div style="font-family: 'Space Grotesk', sans-serif; font-size:0.85rem; font-weight:800; letter-spacing:0.1em;">
-                ENGINEERING TODAY. <span style="color: var(--color-copper);">INTELLIGENCE FOR TOMORROW.</span>
+
+            <div class="m-f-col">
+                <h4>FOLLOW US</h4>
+                <a href="https://linkedin.com" target="_blank" class="m-f-social">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
             </div>
-            <p style="color: rgba(255, 255, 255, 0.5); font-size: 0.85rem; margin:0;">&copy; 2024 Realtek Engineering Pte. Ltd. All rights reserved.</p>
         </div>
     </footer>
+"""
 
-</body>
-</html>
+with open('index.html', 'r', encoding='utf-8') as f:
+    html = f.read()
 
+# Replace from <section id="engineering" ... to </footer>
+import re
+new_html = re.sub(r'<section id="engineering".*?</footer>', html_mockup, html, flags=re.DOTALL)
+
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(new_html)
