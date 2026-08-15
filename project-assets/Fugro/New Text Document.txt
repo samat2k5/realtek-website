@@ -1,0 +1,6 @@
+C&I
+
+Project: PV Installation (Metal roof)
+Location: FUGRO, Loyang Crescent
+Total PV Qty: 641
+System size: 374.985kWp

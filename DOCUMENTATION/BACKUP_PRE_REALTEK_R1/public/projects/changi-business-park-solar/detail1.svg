@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#16324F"/>
+  <rect x="40" y="40" width="720" height="420" rx="8" fill="#0B1F33" stroke="#1F6FA8" stroke-width="2"/>
+  <text x="400" y="230" font-family="sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Rooftop Solar Array &amp; Grid Integration</text>
+  <text x="400" y="280" font-family="sans-serif" font-size="16" fill="#CBD5E1" text-anchor="middle">Changi Business Park Facility, Singapore</text>
+</svg>

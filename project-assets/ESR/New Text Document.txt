@@ -1,0 +1,6 @@
+C&I
+
+Project: PV Installation (Metal roof)
+Location: ESR, 46A Tanjong Penjuru
+Total PV Qty: 2660
+System size: 1649.20kWp

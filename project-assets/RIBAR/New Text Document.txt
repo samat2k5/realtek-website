@@ -1,0 +1,6 @@
+C&I
+
+Project: PV Installation (Metal roof)
+Location: RIBAR INDUSTRIES, Tuas ave 5
+Total PV Qty: 1864
+System size: 1090.44kWp

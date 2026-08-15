@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -28,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/style.css" />
 
@@ -54,420 +53,354 @@
     }
     </script>
 </head>
-
 <body>
-    <div id="app">
-        <!-- Navigation -->
-        <nav id="navbar">
-            <div class="container">
-                <a href="/" class="logo">
-                    <img src="/logo.png" alt="Realtek Engineering Logo">
-                    <span class="logo-text">Realtek</span>
-                </a>
-                
-                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Projects</a></li>
-                    <li><a href="/ezy-saas/index.html">ezy SaaS</a></li>
-                    <li><a href="/about/index.html">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#contact" class="btn-nav-quote">Get Quote</a></li>
-                </ul>
+    <nav class="c-nav">
+        <div class="c-container nav-inner">
+            <a href="/" class="c-brand">
+                <img src="/logo.png" alt="Realtek Logo" class="c-logo-img">
+                <span class="c-logo-type">Realtek</span>
+            </a>
+            <div class="c-nav-links">
+                <a href="#engineering">Engineering <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+                <a href="#projects">Projects</a>
+                <a href="#digital">ezy SaaS</a>
+                <a href="/about/index.html">About</a>
+                <a href="#">Insights</a>
             </div>
-        </nav>
+            <a href="#contact" class="c-btn btn-nav">Contact Engineering &rarr;</a>
+        </div>
+    </nav>
 
-        <!-- Industrial Corporate Hero Banner Section -->
-        <section id="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <span class="eyebrow">INTEGRATED ENGINEERING & DIGITAL SOLUTIONS</span>
-                    <h1>POWERING INDUSTRY,<br><span class="highlight-text">DRIVING INTELLIGENCE.</span></h1>
-                    <p><strong>REALTEK ENGINEERING PTE. LTD.</strong> delivers integrated Solar, Electrical, Digital and Technology Solutions for businesses in Singapore.</p>
-                    <div class="hero-btns">
-                        <a href="#services" class="btn btn-accent btn-lg">Explore Services</a>
-                        <a href="/ezy-saas/index.html" class="btn btn-outline-white btn-lg">Explore ezy SaaS</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services">
-            <div class="container">
-                <div class="section-header">
-                    <span class="eyebrow">CORE CAPABILITIES</span>
-                    <h2>Engineering & Technical Expertise</h2>
-                    <p>Delivering precision infrastructure, renewable energy integration, and corporate digital software.</p>
-                </div>
-
-                <div class="services-grid">
-                    <!-- Card 1: Solar & Sustainability -->
-                    <div class="service-card" id="solar">
-                        <div class="svg-icon-wrapper">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                                <path d="M12 7v14"></path>
-                                <path d="M2 14h20"></path>
-                                <path d="M6 3l2 4"></path>
-                                <path d="M18 3l-2 4"></path>
-                                <path d="M12 2v5"></path>
-                            </svg>
-                        </div>
-                        <h3>01 — Solar & Sustainability</h3>
-                        <p>Specialized in large-scale rooftop solar panel installation, high-voltage cable management, and ongoing renewable energy system maintenance.</p>
-                        <ul class="service-list">
-                            <li>Industrial Rooftop Solar</li>
-                            <li>Cable Routing & Management</li>
-                            <li>System Maintenance</li>
-                        </ul>
-                    </div>
-
-                    <!-- Card 2: Electrical & Instrumentation -->
-                    <div class="service-card" id="electrical">
-                        <div class="svg-icon-wrapper">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                            </svg>
-                        </div>
-                        <h3>02 — Electrical & Instrumentation</h3>
-                        <p>Full-scale Electrical & Instrumentation (E&I) services including control panel installation, power distribution, and high-density cable tray routing.</p>
-                        <ul class="service-list">
-                            <li>Control Panel Installation</li>
-                            <li>Industrial Cable Routing</li>
-                            <li>Instrumentation & Controls</li>
-                        </ul>
-                    </div>
-
-                    <!-- Card 3: ezy SaaS & Digital Solutions -->
-                    <div class="service-card" id="it-solutions">
-                        <div class="svg-icon-wrapper">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                <line x1="8" y1="21" x2="16" y2="21"></line>
-                                <line x1="12" y1="17" x2="12" y2="21"></line>
-                            </svg>
-                        </div>
-                        <h3>03 — ezy SaaS &<br>Digital Solutions</h3>
-                        <p>Custom software engineering and cloud business solutions built under the ezy SaaS initiative to streamline modern operational management.</p>
-                        <ul class="service-list">
-                            <li>ezyHR — HRMS & Payroll</li>
-                            <li>ezyBooks — Coming Soon</li>
-                            <li>ezyCRM — Coming Soon</li>
-                            <li>Enterprise Software</li>
-                            <li>Premium Web Development</li>
-                        </ul>
-                        <a href="/ezy-saas/index.html" class="card-link">Explore ezy SaaS &rarr;</a>
-                    </div>
-
-                    <!-- Card 4: Digital Marketing -->
-                    <div class="service-card" id="marketing">
-                        <div class="svg-icon-wrapper">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="18" y1="20" x2="18" y2="10"></line>
-                                <line x1="12" y1="20" x2="12" y2="4"></line>
-                                <line x1="6" y1="20" x2="6" y2="14"></line>
-                            </svg>
-                        </div>
-                        <h3>04 — Digital Marketing</h3>
-                        <p>Data-driven marketing strategies and web optimization to amplify your brand presence and generate qualified B2B industrial leads.</p>
-                        <ul class="service-list">
-                            <li>SEO & SEM Optimization</li>
-                            <li>Social Media Strategy</li>
-                            <li>Lead Generation Campaigns</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ezy SaaS Technology Division Section -->
-        <section id="ezy-saas">
-            <div class="container">
-                <div class="section-header">
-                    <span class="eyebrow">REALTEK TECHNOLOGY INITIATIVE</span>
-                    <h2>ezy SaaS</h2>
-                    <p>Business Software. Simplified.</p>
-                    <p style="font-size: 1rem; margin-top: 0.8rem; color: var(--color-text-secondary);">
-                        ezy SaaS is the technology software initiative of <strong>REALTEK ENGINEERING PTE. LTD.</strong>, developing practical, secure and scalable cloud-based business applications for modern businesses.
-                    </p>
-                </div>
-
-                <div class="saas-grid">
-                    <!-- ezyHR -->
-                    <div class="saas-card">
-                        <div class="saas-card-header">
-                            <span class="product-tag">ezyHR</span>
-                            <span class="badge badge-active">Active Product</span>
-                        </div>
-                        <h3>Cloud HRMS & Payroll for Singapore Businesses</h3>
-                        <p>Cloud-based HRMS and payroll platform designed for Singapore businesses, with features to support local payroll and HR administration requirements.</p>
-                        <div class="saas-card-footer">
-                            <a href="/ezyhr/index.html" class="btn btn-primary btn-sm">Explore ezyHR &rarr;</a>
-                        </div>
-                    </div>
-
-                    <!-- ezyBooks -->
-                    <div class="saas-card">
-                        <div class="saas-card-header">
-                            <span class="product-tag">ezyBooks</span>
-                            <span class="badge badge-coming-soon">Coming Soon</span>
-                        </div>
-                        <h3>Accounting & Financial Management</h3>
-                        <p>An upcoming ezy SaaS solution engineered to simplify business bookkeeping, invoicing, expense management, and financial reporting.</p>
-                        <div class="saas-card-footer">
-                            <span class="badge badge-coming-soon">Coming Soon</span>
-                        </div>
-                    </div>
-
-                    <!-- ezyCRM -->
-                    <div class="saas-card">
-                        <div class="saas-card-header">
-                            <span class="product-tag">ezyCRM</span>
-                            <span class="badge badge-coming-soon">Coming Soon</span>
-                        </div>
-                        <h3>Customer Relationship Management</h3>
-                        <p>An upcoming CRM platform designed to help sales and service teams manage client leads, quotes, pipelines, and customer support.</p>
-                        <div class="saas-card-footer">
-                            <span class="badge badge-coming-soon">Coming Soon</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="ownership-notice">
-                    ezy SaaS products are developed and operated by <strong>REALTEK ENGINEERING PTE. LTD.</strong> (UEN: 201723665M), Singapore.
-                </div>
-
-                <div style="text-align: center; margin-top: 1.5rem;">
-                    <a href="/ezy-saas/index.html" class="btn btn-outline">Explore ezy SaaS Overview &rarr;</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Selected Projects & Products Section -->
-        <section id="portfolio">
-            <div class="container">
-                <div class="section-header">
-                    <span class="eyebrow">PORTFOLIO</span>
-                    <h2>Selected Projects & Products</h2>
-                    <p>Engineering projects delivered and technology products developed by REALTEK ENGINEERING PTE. LTD.</p>
+    <section class="hero-r13">
+        <div class="hero-r13__content">
+            <div class="hero-r13__copy">
+                <p class="hero-r13__eyebrow">INTEGRATED ENGINEERING & DIGITAL SOLUTIONS</p>
+                <h1 class="hero-r13__title">
+                    <span>POWERING</span>
+                    <span>INDUSTRY.</span>
+                    <span class="accent">DRIVING</span>
+                    <span class="accent">INTELLIGENCE<span class="dot">.</span></span>
+                </h1>
+                <p class="hero-r13__description">
+                    REALTEK ENGINEERING PTE. LTD. delivers integrated Solar, Electrical, Digital and Technology Solutions for businesses in Singapore.
+                </p>
+                <div class="hero-r13__actions">
+                    <a href="#engineering" class="c-btn btn-primary">Explore Engineering &rarr;</a>
+                    <a href="#digital" class="c-btn btn-outline">Explore ezy SaaS &rarr;</a>
                 </div>
                 
-                <!-- 1. Engineering Projects Section -->
-                <div style="margin-bottom: 3rem;">
-                    <h3 style="font-size: 1.35rem; color: var(--color-navy-primary); margin-bottom: 1.2rem; border-bottom: 2px solid var(--color-border); padding-bottom: 0.6rem;">
-                        Engineering Projects
-                    </h3>
-                    <div id="portfolio-container"></div>
-                </div>
-
-                <!-- 2. Technology Products (ezy SaaS) Section -->
-                <div style="margin-top: 3.5rem; background: var(--color-bg-secondary); padding: 2.2rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
-                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--color-border); padding-bottom: 0.8rem;">
-                        <h3 style="font-size: 1.35rem; color: var(--color-navy-primary); margin: 0;">
-                            Technology Products (ezy SaaS)
-                        </h3>
-                        <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-corporate-blue);">Developed &amp; Operated by REALTEK ENGINEERING PTE. LTD.</span>
+                <div class="hero-r13__trust">
+                    <div class="trust-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <div class="trust-text">
+                            <strong>SINGAPORE REGISTERED</strong>
+                            <span>UEN: 202206506C</span>
+                        </div>
                     </div>
+                    <div class="trust-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <div class="trust-text">
+                            <strong>EXPERIENCED ENGINEERING TEAM</strong>
+                            <span>Design - Build - Commission</span>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <div class="trust-text">
+                            <strong>QUALITY & SAFETY DRIVEN</strong>
+                            <span>Reliable. Compliant. Responsible.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-r13__media">
+            <img src="/assets/images/hero/realtek-singapore-solar-hero.png" alt="Singapore skyline at sunrise with solar panels">
+        </div>
+        
+        <aside class="hero-r13__message">
+            Building a sustainable future through engineering excellence and smart technology.
+        </aside>
+    </section>
 
-                    <div class="saas-grid">
-                        <div class="saas-card" style="background: #FFFFFF;">
-                            <div class="saas-card-header">
-                                <span class="product-tag">ezyHR</span>
-                                <span class="badge badge-active">Active Product</span>
-                            </div>
-                            <h3>ezyHR — Cloud HRMS &amp; Payroll</h3>
-                            <p>Cloud-based HRMS and payroll platform designed for Singapore businesses, with features to support local payroll and HR administration requirements.</p>
-                            <div class="saas-card-footer" style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1.2rem;">
-                                <a href="/ezyhr/index.html" class="btn btn-primary btn-sm">Explore ezyHR &rarr;</a>
-                                <a href="https://hr.ezy.sg/" target="_blank" class="btn btn-outline btn-sm">Launch Portal ↗</a>
+        <section id="engineering" class="c-capabilities">
+                <div class="c-container cap-grid">
+            <div class="cap-intro">
+                <span class="c-eyebrow orange">OUR STRENGTH</span>
+                <h2>ENGINEERING CAPABILITIES</h2>
+                <p>Three core disciplines. Integrated expertise. End-to-end execution with engineering precision.</p>
+                <a href="#contact" class="c-link orange-link">OUR APPROACH &rarr;</a>
+            </div>
+            
+            <div class="cap-card">
+                <div class="cc-img">
+                    <img src="/projects/certis-solar.jpg" alt="C&I Solar PV">
+                    <div class="cc-badge verdigris">01</div>
+                </div>
+                <div class="cc-content">
+                    <h3>C&I SOLAR PV</h3>
+                    <p>Customised solar PV solutions for commercial and industrial facilities. From feasibility and design to installation and performance optimisation.</p>
+                    <a href="#contact" class="c-link verdigris-link">LEARN MORE &rarr;</a>
+                </div>
+            </div>
+
+            <div class="cap-card">
+                <div class="cc-img">
+                    <img src="/projects/ei-works.jpg" alt="Electrical & Instrumentation">
+                    <div class="cc-badge orange">02</div>
+                </div>
+                <div class="cc-content">
+                    <h3>ELECTRICAL & INSTRUMENTATION (E&I)</h3>
+                    <p>Comprehensive E&I systems for power distribution, instrumentation, control and automation. Built for safety, reliability and operational excellence.</p>
+                    <a href="#contact" class="c-link orange-link">LEARN MORE &rarr;</a>
+                </div>
+            </div>
+
+            <div class="cap-card">
+                <div class="cc-img">
+                    <img src="/projects/hdb-solar.jpg" alt="HDB Solar PV">
+                    <div class="cc-badge teal">03</div>
+                </div>
+                <div class="cc-content">
+                    <h3>HDB SOLAR PV</h3>
+                    <p>Delivering sustainable solar solutions for HDB communities. Improving energy efficiency, reducing carbon impact and creating long-term value for residents.</p>
+                    <a href="#contact" class="c-link teal-link">LEARN MORE &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="c-changi">
+        <div class="changi-background"></div>
+        <div class="c-container changi-grid">
+            <div class="changi-main">
+                <span class="c-eyebrow teal-light">SIGNATURE PROJECT</span>
+                <h2>CHANGI AIRPORT T1 & T2</h2>
+                <p>Powering one of the world's most iconic travel hubs with high-performance solar infrastructure. Engineering excellence at scale. Built for reliability. Designed for the future.</p>
+                <a href="/projects/changi-airport/index.html" class="c-btn btn-copper">VIEW PROJECT DETAILS &rarr;</a>
+            </div>
+            <div class="changi-stats">
+                <div class="changi-stat">
+                    <span class="stat-val">4,141.8</span>
+                    <span class="stat-label">kWp CAPACITY</span>
+                </div>
+                <div class="changi-stat">
+                    <span class="stat-val">7,080</span>
+                    <span class="stat-label">PV PANELS INSTALLED</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="c-projects">
+        <div class="c-container proj-grid">
+            <div class="proj-intro">
+                <span class="c-eyebrow orange">PROVEN PERFORMANCE</span>
+                <h2>SELECTED ENGINEERING WORK</h2>
+                <p>Real projects. Real impact. Delivering value across industries and sectors.</p>
+                <a href="#projects" class="c-link orange-link">VIEW ALL PROJECTS &rarr;</a>
+            </div>
+            
+            <div class="proj-gallery">
+                <div class="pg-major">
+                    <img src="/projects/geodis-solar.jpg" alt="GEODIS Singapore">
+                    <div class="pg-overlay">
+                        <span class="pg-tag">FEATURED PROJECT</span>
+                        <h3>GEODIS Singapore</h3>
+                        <p>Rooftop Solar PV System</p>
+                    </div>
+                </div>
+                <div class="pg-secondary">
+                    <div class="pg-item top-right">
+                        <img src="/projects/esr-solar.jpg" alt="ESR REIT Properties">
+                        <div class="pg-overlay">
+                            <h3>ESR REIT Properties</h3>
+                            <p>Rooftop Solar PV System</p>
+                        </div>
+                    </div>
+                    <div class="pg-row">
+                        <div class="pg-item">
+                            <img src="/projects/ribar-solar.jpg" alt="Ribar Industries">
+                            <div class="pg-overlay">
+                                <h3>Ribar Industries</h3>
+                                <p>Rooftop Solar PV System</p>
                             </div>
                         </div>
-
-                        <div class="saas-card" style="background: #FFFFFF;">
-                            <div class="saas-card-header">
-                                <span class="product-tag">ezyBooks</span>
-                                <span class="badge badge-coming-soon">Coming Soon</span>
-                            </div>
-                            <h3>Accounting &amp; Financial Management</h3>
-                            <p>An upcoming ezy SaaS solution engineered to simplify business bookkeeping, invoicing, expense management, and financial reporting.</p>
-                            <div class="saas-card-footer">
-                                <span class="badge badge-coming-soon">Coming Soon</span>
-                            </div>
-                        </div>
-
-                        <div class="saas-card" style="background: #FFFFFF;">
-                            <div class="saas-card-header">
-                                <span class="product-tag">ezyCRM</span>
-                                <span class="badge badge-coming-soon">Coming Soon</span>
-                            </div>
-                            <h3>Customer Relationship Management</h3>
-                            <p>An upcoming CRM platform designed to help sales and service teams manage client leads, quotes, pipelines, and customer support.</p>
-                            <div class="saas-card-footer">
-                                <span class="badge badge-coming-soon">Coming Soon</span>
+                        <div class="pg-item">
+                            <img src="/projects/fugro-solar.jpg" alt="Fugro Singapore">
+                            <div class="pg-overlay">
+                                <h3>Fugro Singapore</h3>
+                                <p>Rooftop Solar PV System</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Section / Get a Quote Placeholder -->
-        <section id="contact">
-            <div class="container">
-                <div class="contact-box">
-                    <div class="contact-info">
-                        <span class="eyebrow">CONTACT & INQUIRIES</span>
-                        <h2>Let's Build Something Together.</h2>
-                        <p>Speak with our engineering and digital technology teams for project inquiries, quotes, and service consultations.</p>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                </div>
-                                <div><strong>Corporate Entity:</strong> REALTEK ENGINEERING PTE. LTD.</div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"></rect><line x1="7" y1="8" x2="17" y2="8"></line><line x1="7" y1="12" x2="17" y2="12"></line></svg>
-                                </div>
-                                <div><strong>UEN:</strong> 201723665M</div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                </div>
-                                <div><strong>Address:</strong> 132 Gul Circle, Singapore 629597</div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                                </div>
-                                <div><strong>Corporate Email:</strong> admin@realtekengg.com</div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                </div>
-                                <div><strong>ezy SaaS Support:</strong> <a href="mailto:support@ezy.sg" style="color: var(--color-corporate-blue);">support@ezy.sg</a></div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
-                                </div>
-                                <div><strong>ezyHR Support:</strong> <a href="mailto:support@hr.ezy.sg" style="color: var(--color-corporate-blue);">support@hr.ezy.sg</a></div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line></svg>
-                                </div>
-                                <div><strong>ezyHR Application Portal:</strong> <a href="https://hr.ezy.sg/" target="_blank" style="color: var(--color-corporate-blue);">https://hr.ezy.sg/</a></div>
-                            </div>
-                        </div>
-
-                        <div style="margin-top: 1.5rem;">
-                            <a href="https://wa.me/6590291433?text=Hi%20Realtek%20Engineering%2C%20I%20would%20like%20to%20enquire%20about%20your%20services.%20Please%20advise."
-                                target="_blank" class="btn btn-whatsapp">
-                                💬 Chat with us on WhatsApp
-                            </a>
-                            <p class="direct-call">Or call us directly at <strong>+65 9029 1433</strong> (Mobile / Direct Line)</p>
-                        </div>
+    <section id="digital" class="c-ezy">
+        <div class="c-container ezy-grid">
+            <div class="ezy-intro">
+                <span class="c-eyebrow teal">FROM ENGINEERING TO INTELLIGENCE</span>
+                <h2>ezy SaaS</h2>
+                <p>Digital solutions that transform the way businesses manage people, operations and compliance.</p>
+                <a href="https://ezy.sg/" target="_blank" class="c-btn btn-teal">Explore ezy SaaS &rarr;</a>
+            </div>
+            
+                                                <div class="ezy-mockup has-mobile">
+                                <div class="browser-mockup desktop-ui">
+                    <div class="browser-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <div class="browser-url">hr.ezy.sg</div>
                     </div>
+                    <img src="/assets/images/ezyHR.jpeg" alt="ezyHR Interface" class="browser-content">
+                </div>
+                <img src="/assets/images/ezyHR_mobile1.jpeg" alt="ezyHR Mobile App" class="ezy-ui-img mobile-ui m-left">
+                <img src="/assets/images/ezyHR_mobile2.jpeg" alt="ezyHR Mobile App" class="ezy-ui-img mobile-ui m-right">
+            </div>
 
-                    <!-- Get a Quote Placeholder Form Card -->
-                    <div class="quote-form-card" id="get-a-quote">
-                        <h3>Request a Quote</h3>
-                        <p>Submit your project details and our engineering team will get back to you within 24 hours.</p>
-                        
-                        <form id="contact-quote-form" onsubmit="event.preventDefault(); alert('Thank you for requesting a quote. Realtek Engineering will contact you shortly!');">
-                            <div class="form-group">
-                                <label for="quote-name">Full Name / Contact Person *</label>
-                                <input type="text" id="quote-name" required placeholder="e.g. John Tan" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="quote-email">Business Email Address *</label>
-                                <input type="email" id="quote-email" required placeholder="e.g. john@company.com" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="quote-service">Service Requirement *</label>
-                                <select id="quote-service" required>
-                                    <option value="">Select Service Category</option>
-                                    <option value="solar">Solar Panel Installation & Energy</option>
-                                    <option value="electrical">Electrical & Instrumentation (E&I)</option>
-                                    <option value="saas">ezy SaaS / ezyHR Platform</option>
-                                    <option value="custom">Custom Web & Enterprise Software</option>
-                                    <option value="marketing">Digital Marketing</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="quote-message">Project Scope / Remarks</label>
-                                <textarea id="quote-message" rows="3" placeholder="Describe project requirements or scope..."></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-accent" style="width: 100%;">Submit Quote Request</button>
-                        </form>
+            <div class="ezy-features">
+                <div class="ef-item active-product">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="teal"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <div class="ef-text">
+                        <h4>ezyHR <span class="status-tag active">ACTIVE</span></h4>
+                        <p>Comprehensive HR management from hire to retire.</p>
+                    </div>
+                </div>
+                <div class="ef-item coming-soon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="teal"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                    <div class="ef-text">
+                        <h4>ezyBooks <span class="status-tag">COMING SOON</span></h4>
+                        <p>Accounting & Finance made simple and accurate.</p>
+                    </div>
+                </div>
+                <div class="ef-item coming-soon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="teal"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    <div class="ef-text">
+                        <h4>ezyCRM <span class="status-tag">COMING SOON</span></h4>
+                        <p>Manage customer relationships and business growth.</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Deep Navy Corporate Footer -->
-        <footer>
-            <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-brand">
-                        <span class="logo-text">Realtek</span>
-                        <p><strong>REALTEK ENGINEERING PTE. LTD.</strong></p>
-                        <p style="margin-top: 0.3rem; font-size: 0.88rem; color: #CBD5E1;">Singapore | UEN: 201723665M</p>
-                        <p style="margin-top: 0.5rem; font-size: 0.88rem; color: #A0AEC0;">Delivering integrated engineering, digital and cloud SaaS solutions in Singapore.</p>
+    <section id="contact" class="c-contact">
+        <div class="c-container contact-grid">
+            <div class="contact-info">
+                <span class="c-eyebrow orange">CONNECT WITH REALTEK</span>
+                <h2>LET'S ENGINEER<br>WHAT'S NEXT.</h2>
+                <p>Tell us about your project or challenge. Our team will respond with the right engineering solution.</p>
+                
+                <div class="contact-methods">
+                    <div class="cm-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="orange"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <a href="tel:+6590291433">+65 9029 1433</a>
                     </div>
-
-                    <div class="footer-col">
-                        <h4>Company</h4>
-                        <ul class="footer-links">
-                            <li><a href="/about/index.html">About Us</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#portfolio">Projects</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
+                    <div class="cm-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="orange"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <a href="mailto:admin@realtekengg.com">admin@realtekengg.com</a>
                     </div>
-
-                    <div class="footer-col">
-                        <h4>ezy SaaS</h4>
-                        <ul class="footer-links">
-                            <li><a href="/ezyhr/index.html">ezyHR</a></li>
-                            <li><a href="/ezy-saas/index.html">ezyBooks — Coming Soon</a></li>
-                            <li><a href="/ezy-saas/index.html">ezyCRM — Coming Soon</a></li>
-                        </ul>
+                    <div class="cm-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="orange"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span>132 Gul Circle<br>Singapore 629597</span>
                     </div>
-
-                    <div class="footer-col">
-                        <h4>Support & Legal</h4>
-                        <ul class="footer-links">
-                            <li><a href="mailto:support@ezy.sg">ezy SaaS Support</a></li>
-                            <li><a href="mailto:support@hr.ezy.sg">ezyHR Support</a></li>
-                            <li><a href="/privacy/index.html">Privacy Policy</a></li>
-                            <li><a href="/terms/index.html">Terms of Use</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="footer-bottom">
-                    <p>&copy; 2026 REALTEK ENGINEERING PTE. LTD. All Rights Reserved.</p>
-                    <p>Singapore Registered Entity | UEN: 201723665M</p>
                 </div>
             </div>
-        </footer>
-    </div>
-    <script type="module" src="/main.js"></script>
+
+            <div class="contact-form-area">
+                <form id="contact-quote-form" onsubmit="event.preventDefault(); alert('Thank you for requesting a quote. Realtek Engineering will contact you shortly!');">
+                    <div class="form-row">
+                        <div class="f-input">
+                            <label>Full Name <span class="req">*</span></label>
+                            <input type="text" required>
+                        </div>
+                        <div class="f-input">
+                            <label>Company Name <span class="req">*</span></label>
+                            <input type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="f-input">
+                            <label>Email Address <span class="req">*</span></label>
+                            <input type="email" required>
+                        </div>
+                        <div class="f-input">
+                            <label>Contact Number <span class="req">*</span></label>
+                            <input type="tel" required>
+                        </div>
+                    </div>
+                    <div class="f-input">
+                        <label>Project Type / Service <span class="req">*</span></label>
+                        <select required>
+                            <option value="">Please select</option>
+                            <option value="solar">C&I Solar PV</option>
+                            <option value="solar-hdb">HDB Solar PV</option>
+                            <option value="electrical">Electrical & Instrumentation (E&I)</option>
+                            <option value="saas">ezy SaaS</option>
+                        </select>
+                    </div>
+                    <div class="f-input">
+                        <label>Tell us about your project or requirements. <span class="req">*</span></label>
+                        <textarea rows="4" placeholder="Your message..."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <a href="https://wa.me/6590291433" target="_blank" class="c-btn btn-wa">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right:0.5rem;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.062-.173-.298-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                            CHAT ON WHATSAPP
+                        </a>
+                        <button type="submit" class="c-btn btn-copper">SUBMIT REQUEST &rarr;</button>
+                    </div>
+                    <p class="f-secure"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Your information is secure and will not be shared.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="c-footer">
+        <div class="c-container footer-grid">
+            <div class="f-brand">
+                <img src="/logo.png" alt="Realtek Logo" class="f-logo">
+                <span class="f-logo-type">Realtek</span>
+                <p>REALTEK ENGINEERING PTE. LTD.<br>UEN: 202206506C<br>Singapore Registered Entity<br>All rights reserved.</p>
+            </div>
+            <div class="f-col">
+                <h4>COMPANY</h4>
+                <a href="/about/index.html">About Us</a>
+                <a href="#">Our Team</a>
+                <a href="#">Careers</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="f-col">
+                <h4>ENGINEERING</h4>
+                <a href="#engineering">C&I Solar PV</a>
+                <a href="#engineering">Electrical & Instrumentation (E&I)</a>
+                <a href="#engineering">HDB Solar PV</a>
+            </div>
+            <div class="f-col">
+                <h4>PROJECTS</h4>
+                <a href="#projects">All Projects</a>
+                <a href="#projects">Featured Project</a>
+                <a href="#contact">Project Enquiries</a>
+            </div>
+            <div class="f-col">
+                <h4>EZY SAAS</h4>
+                <a href="https://ezy.sg/">ezyHR</a>
+                <span class="muted">ezyBooks</span>
+                <span class="muted">ezyCRM</span>
+            </div>
+            <div class="f-col">
+                <h4>SUPPORT & LEGAL</h4>
+                <a href="mailto:support@hr.ezy.sg">ezyHR Support</a>
+                <a href="/privacy/index.html">Privacy Policy</a>
+                <a href="/terms/index.html">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>
+

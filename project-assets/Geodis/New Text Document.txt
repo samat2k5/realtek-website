@@ -1,0 +1,6 @@
+C&I
+
+Project: PV Installation (Metal roof)
+Location: GEODIS, 44 Benoi Rd
+Total PV Qty: 940
+System size: 540.5kWp
